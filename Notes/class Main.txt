@@ -1,0 +1,1735 @@
+cmt prompt->java -version
+envinonment variables:
+-> JAVA_HOME-> path
+->system->path->%JAVA_HOME%\bin
+
+extension->.java->.class->jar->war
+
+varsions:
+java SE-standered edition(core java)->simple program
+EE(enterprises edition)-advanced java->project
+ME(micro edition)->graphics/movies
+
+Main.java: >javac Main.java-> Main.class>java Main
+
+_____________________________________________________________________________________________________________________________________
+java.lang.Object class -->its Base class of all classess. -->class object is the root of the class hierarchy. Every class has object as a superclass.All objects,including arrays -,implements the methods of this class.(because by default every classes is sub class of Object class in java.)
+DAY-2:
+class Main
+{
+static void printHello(){
+System.out.println("Hellow vijay");
+}
+public static void main(String[] args){
+printHello();
+}
+}
+
+
+class Main
+{
+void printHello(){
+System.out.println("Hello Vijay");
+}
+public static void main(String[] args){
+Main m=new Main();
+m.printHello();
+}
+}
+
+
+Access Modifier: 
+    -->Defines the access type of the method i.e. from where it can be accessed in your application. In Java, there are 4 types of access specifiers: 
+
+  *public: Accessible in all classes in your application.
+
+  *protected: Accessible within the package in which it is defined and in its subclass(es) (including subclasses declared outside the package).
+  
+  *private: Accessible only within the class in which it is defined.
+
+  *default (declared/defined without using any modifier): Accessible within the same class and package within which its class is defined.
+     --------------------
+
+static <- static / obj creation - NO
+static <- non-static / obj creation - yes
+non_static <- static / obj creartion - no
+non static <- non static / obj creation - no
+
+obj creation ->  className objName= new clasName();
+___________________________________________________________________________________________________________________________________
+day 3:
+
+Variables:(data container)
+
+*All Java variables must be identified with unique names.
+
+*These unique names are called identifiers.
+
+*Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+
+*Note: It is recommended to use descriptive names in order to create understandable and maintainable code:
+
+int minutesPerHour = 60;  // Good
+
+int m = 60      // OK, but not so easy to understand what m actually is
+
+              -------------------------------------------------
+
+syntax:
+datatype variableName;
+
+datatype:
+*Primitive:-> limited range Size ->
+1.Boolean (Boolean)->1byte, //1byte=8bits -> (-2^7 to + 2^7-1)  ->which can only take the values true or false
+
+2.Character (char) (utf-16 format),(character datatype is a encoded data type)->2byte, ->   The char data type is used to store a single character. 
+
+3.Numeric(integer) - (Byte[1byte],short[2byte],int[4byte],long[8byte]) ->stores only numeric values
+
+4.Float -(Float[4],Double[8]) ->The precision of float is only six or seven decimal digits, while double variables have a precision of about 15 digits.  ->store only decimal value
+
+ folat ->A floating point number can also be a scientific number with an "e" to indicate the power of 10, ex:3e4;
+
+ex:boolean isValid=true;
+ --------------------------------
+byte = 1 byte = -128 to 127
+
+short = 2 bytes = 128 x 128 x 2 = -32,768 to 32,767
+
+int = 4 bytes = 32768 x 32768 x 2 = -2,147,483,648 to 2,147,483,647
+
+long = 8 bytes = 2147483648 x 2147483648 x 2 = -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+
+float = 4 bytes = Sufficient for storing 6 to 7 decimal digits
+
+double = 8 bytes = Sufficient for storing 15 decimal digits
+
+boolean = 1 bit = Stores true or false values
+
+char = 2 bytes = Stores a single character/letter or ASCII values string 
+---------------------------------------------
+
+*Non-primitive -> no limited range size -> Non-primitive data types are called reference types because they refer to objects.
+1.array 
+2.class                                        
+3.interfaces 
+4.String ->->The String data type is used to store a sequence of characters (text).
+5.Enum 
+ex:String name= "vijay";
+------------------------------------------
+The main difference between primitive and non-primitive data types are:
+
+*Primitive types are predefined (already defined) in Java. Non-primitive types are created by the programmer and is not defined by Java (except for String).
+*Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.
+*A primitive type has always a value, while non-primitive types can be null.
+*A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.
+
+   --------------------------
+public class Main{
+final static int votingAge=18; // global variable
+public static void main(String[] args){
+
+//boolean - stores true/false
+final boolean isvalid =true;
+
+//isvalid =false; // can't change final variable
+
+char c= 'r'; //this can be alphabet or symbol or unicodes or number
+
+//numeric dataypes:
+byte b=-128;
+short s= 1432;
+int i= 12343;
+long l=1234567898765L; // L- to say Java that the digits got to end
+
+//decimals:
+float f =234.432f; //f -  to say decimals got to end
+double d = 12343.244;
+
+ //String - non-primitive,stores group of characters
+String str - "hellow, world":
+
+System.out.print(isValid);
+}
+}
+
+finalkey:  varaiable - that final is used to can't change the value in that variable (which means unchangeable and read-only):
+final var --> cann't be edited
+final methods --> cann't be overriden
+final class cannot be inherited (overrider)
+
+----------------------
+concatenation
+int x = 5, y = 6, z = 50;
+System.out.println(x + y + z); 
+o/p=61
+-------------------------------
+One Value to Multiple Variables
+You can also assign the same value to multiple variables in one line:
+ex:
+int x, y, z;
+x = y = z = 50;
+System.out.println(x + y + z);
+--------------------------------------
+
+string concatination:
+//String txt = "The character \\ is called backslash.";  ->   System.out.println(txt); -> o/p The character \ is called backslash
+String txt = "The character \' is called backslash."     ->     o/p The character \ is called backslash
+String txt = "The character \" is \" called backslash."  ->   o/p The character "is" called backslash
+___________________________________________________________________________________________________________________________________________________
+day-4 (26.01.24)
+
+Git (version control sysyem):
+*Github-500gb free,->opersource
+*bitbucket -> hava microsoft->pay source
+
+____________________________________________________________________________________________________________________________________________________________
+day-5 (29.01.24);
+
+Operators:(Operators are used to perform operations on variables and values.):
+----------
+1. assignment optr -> 1=   -> 
+
+2. Arithmatic optr -> +, -, *, /, ^, etc... ->Arithmetic operators are used to perform common mathematical operations
+
+3. Relational optr -> ==, >, <, >=, <=     ->Comparison operators are used to compare two values (or variables). This is important in programming, because it helps us to find answers and make decisions.
+The return value of a comparison is either true or false. 
+
+4. Logical    optr -> &&(AND), ||(OR), !(NOT)  -> Logical operators are used to determine the logic between variables or values. the return value of either true or flse.
+
+5. Compount assignment optr -> b += a; (like as b=b+a) 
+
+6. Bitwise optr ->  & (bitwise AND), | (Bitwise OR) -> (applicable in integer) 
+
+7. Incremtnet/Decrement => ++,-- -> (++a -> preIncrement),(a++ -> postIncrement)
+
+8. Ternary optr -> (conditon)? true: false;
+
+ex: public class Main(){
+public static void main(String[] args){
+int a=5, b=5;
+System.out.println(++a);
+System.out.println(b++);
+
+String result= b==6? "inscreased" : "Not increased";
+System.out.println(result);
+}
+
+____________________________________________________________________________________________________________________________________________________________
+day-6(30.01.24);
+
+expression:
+expression lilke as -> a*b-c/d+e-10 (simple maths expression)
+1.infex -> a+b -> applicable with (BODMAS)
+2.prefex -> +ab
+3.postfex -> ab+
+
+command line:
+//     -> single line cmd
+/* */  -> multi line cmd
+
+excercise:
+compare tow nums :
+1.Greater than
+2.Less than
+3.Equal to
+4.Not equal to
+5.Greater than or equal to
+6.Less than or equal to 
+
+__________________________________________________________________________________
+day-7 (31.01.24);
+
+Conditional optr:   1.expressions, 2.matches/equality
+if else condition:(linear search):
+1.if
+2.else if (optional)
+3.else (optional)
+
+excercise:
+int mark1=10,mark2=15,mark3=10;
+int total=mark1+mark2+mark3;
+float avg=total/3;
+ 1.<50->fail
+ 2.50-60 ->grade c
+ 3.60-70 ->grade B
+ 4.70-80 ->grade B+
+ 5.80-90 ->grade A
+ 6.>90 -> grade A+
+
+Scanner sc=new Scanner();
+n=sc.nextInt();
+________________________________________________________________________________________
+day-8 (2.02.24);
+
+Switch statement:
+support us (Char,int, boolean,short),
+
+switch(expression/variable)
+{
+case value1:
+//statement
+break;
+case value2: 
+//statement                                                    
+break;                                                          
+default:                                                        
+//statement
+}
+
+
+-> can given two case in one statement like as ->
+case value1: 
+case value2:
+//statement;
+break;
+
+
+example program:
+int day=0;
+switch(day){
+case 0;
+system.out.println("Sunday");
+break;
+}
+case 1;
+system.out.println("Monday");
+break;
+}
+case 2;
+system.out.println("Tuesday");
+break;
+}
+default;
+system.out.println("No Days Matching");
+}
+-----------------------------
+Loops (conditional loop):
+(execute a group of statement a number of time)
+
+1.for
+2.while
+3.do-while
+
+
+1.for loop:
+ 1.initial
+ 2.condition  ->(1/more conditon)
+ 3.inc/dec
+
+//increment
+int i;
+for(i=0;i<n;i++){
+System.out.println("Hai");
+}
+
+//decrement
+for(int i=10;i>n;i--){
+System.out.println("Hai");
+}
+
+___________________________________________________________________________________________________
+
+day-9:(05.02.24)
+
+while loop:  -->while old loop and for advanced loop(for loop is created after while loop)  
+syntax;
+ 
+initial;
+while(condition){
+//statement;
+inc/dec;
+}
+----------------------
+do...while loop:  --> do...while loop is execute atleast one time
+
+syntax:
+
+initial;
+do{
+//statement;
+inc/dec;
+}while(condition);
+_______________________________________________________________________________________________________________________________________
+day-10(06.02.24):
+
+Arrays: 
+->Index Based Data Structure,
+->group/list of items of similar datatype,
+
+initialize of size:
+1.
+2.
+
+int arr[]; or int[] arr; ->both are same -> declare array
+int arr[]=new int[5];    ->[5] -> means total no.of data to get stored in an array
+
+value insert: //array index starting with 0;
+arr[0]=5;
+arr[1]=10;
+no value assign a variable server allocate for a default value =0
+
+access value:
+Sop(arr[0]);
+
+can access all data  use loops:
+find array length -> array_Name.length
+
+for(i=0;i<arr.length;i++){
+Sop(arr[i])
+}
+ 
+# disadvantage:
+not possible resizeing on array in java
+
+ex pro;
+1.
+int arr[]=new int[5];
+arr[0]=10;
+arr[1]=20;
+for(i=0;i<5;i++){
+Sos(arr[i]);
+}
+o/p->10,20,0,0,0,
+
+2.
+int arr[]={2,3,4,5,6} 
+for(i=0;i<arr.length;i++){
+Sos(arr[i]);
+}
+______________________________________________________________________________________________________________________________________________________________
+day11-(07.02.24):
+
+var arr[] ={1,2,3,4,5,6};
+task1:  add one element at the end
+approach:
+1.create another array variable with(current size +1) as length
+2.copy/add all elements from arr to new array
+3.assign the element you wish to add @ last index
+
+
+task2:
+1.add an element at the end(int array)
+2.add all elements(float array)
+3.Remove an element at the end(double arr)
+4.Add an element at the beginning(int)
+5.Remove an element at given index(int)
+6.Find max & min values(int array) 
+
+___________________________________________________________________________________________________________________________________
+day-12(12.02.24):
+
+static -> define way to access number of class;
+
+User-Inputs:
+1.Command line Argument
+2.console class
+3.Buffered Reader class
+4.Scanneer class
+
+Command Line Arguments: --> values given in command line ->ex:javac main.java-> java main values(java main 2 3 4 5);
+-----------------------
+
+The java command-line argument is an argument i.e. passed at the time of running the java program.
+
+The arguments passed from the console can be received in the java program and it can be used as an input.
+
+So, it provides a convenient way to check the behavior of the program for the different values. You can pass N (1,2,3 and so on) numbers of arguments from the command prompt.
+
+--------------------
+ex 1:for(i=0;i<args.length;i++){
+Sop(args[i]};
+
+ex2:
+convert string to int -->Integer.parseInt(string values);
+
+public static void main(String[] args){
+int age=Integer.parseInt(args[0]);
+Sop(age);
+if(ags>=18){
+sop("eligible");
+}else{sop("not eligible"0);}}
+
+}
+
+another 2_4 --> 2to4 -> get use input
+
+type casting
+----------------
+2.Console Class:
+ *The java Console class is be used to get input from console.it provides to read text and password.
+ *If you read password using Console class,it will not be displayed to the user.
+ *The java.io.Console class is attached with system console internally.The Console class is introduced since jdk 1.5.
+
+
+
+
+__________________________________________________________________________________________________________
+
+day-14(14.02.24):
+
+BufferedReader -> package -java.io 
+ -> Read input from multiple stream
+
+*read(); -> single word
+*readLine();  --> Complete line as string -> jumps to next line
+
+ex pro:
+import java.io.BufferedReader;
+import java.io.BufferedReader;
+
+public class BufferedReaderEx{
+public static void main(String[] args)throws Exception{
+InputStreamReader inputStream = new InputStreamReader(System.in);
+BufferedReader reader=new BufferedReader(inputStream)l
+
+String name=reader.readLine();
+Double age=Double.parseDouble(reader.readLine());
+Sop(name);
+sop(age);
+}
+}
+
+
+exception
+
+_________________________________________________________________________________________________________________________________________
+day-15(15.02.24):
+
+methods:(named piece of code/statements)
+
+1.predefined/Built it
+2.User defined
+
+input ->parametered/Non-paramentered
+
+i.  Access modifier(opt)
+ii. Static(opt)
+iii.Return type -> void/Any datatype
+iv. Method Name 
+v.  parameter(opt)/arguments
+
+
+ex pro:
+public class Methods{
+String global ="global variable";
+
+//Non-paramenter:
+public static void printHelloworld(){
+Sop("hello");
+}
+
+//parameter:
+public static void printHelloworld(String data){
+Sop(data);
+}
+
+//return type:
+boolean isVotingEligible(int age){
+boolean result=false;
+if(age>=18){
+result=true;
+}
+return result;
+}
+
+public static void main(String[] args){
+String local="Hello parameter";
+printHelloworld();       //-->call Non-parameter method
+printHelloworld(local);  //-->call with parameter method
+boolean votingEligiblity=new method().isVotingEligible(20);  //-->call return type method
+Sop(votingEligiblity);
+}
+}
+_____________________________________________________________________________________________________________________
+day-16(19.02.24):
+
+Constructors: --> its a special method,.In java, every class has its constructor that is invoked automatically when an object of the class is created. 
+constructor is similar to a method but in actual,it is not a method.
+-->Constructors are used for initializing new objects.
+---------------
+
+
+static-->class specific details.
+instance --> object specific details.
+
+
+1.Special type of method
+2.will be executed on obj creation
+3.Class name and method name are same
+4.no return type.
+
+----
+types of Constructors:
+1.Default Constructor
+2.Parameterized
+3.Non-Parameterized
+4.copy-Constructor
+
+1.Default Constructor:
+       ->its empty constructor ->non visible->Main(){} ->default constructor already created in automatic when class is created but not visible 
+
+2.Parameterized:
+        -> ex: Main(String str){//Statement}
+3.non-parameterized:
+        -> ex: Main(){//Statement}
+
+4.copy-Constructor:
+        ->pass a arguments with objName(reference) to constructor. 
+        ->ex:Main m=new Main();
+          -> new Main(m);         
+
+private key->uses of can't use another class or methods
+
+
+you can create multiple constructor -->that is constructor overloading
+
+--------------
+you tube reference:
+constructor: initializing obj specific variables.
+-->  constructor is usefull for constructing a class.
+-->constructor is usefull for initialising instance variables or values.
+-->Basically class have default constructor but you overload a default  constructor (Ex: pass the instance values )and next you wnat to create empty obj (means no pass instance values) must create default constructor. 
+
+-----
+Notes: default access specifier another name package level access specifier
+  -->  private constructor is allowed.
+___________________________________________________________________________________________________________________________
+day-17(.02.24):
+OOPs(object oriented programming language):  
+
+-->Code reusability.
+
+1.Class & Object
+2.Inheritance   -->link grp of cls
+3.Polymorphism
+4.Abstraction   -->data hiding -->specify class design
+5.Encapsulation    -->obj structure  -->data binding.
+
+
+OOPs:
+Object-oriented programming has several advantages over procedural programming:
+
+*OOP is faster and easier to execute.
+*OOP provides a clear structure for the programs.
+*OOP helps to keep the Java code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug.
+*OOP makes it possible to create full reusable applications with less code and shorter development time.
+*Tip: The "Don't Repeat Yourself" (DRY) principle is about reducing the repetition of code. You should extract out the codes that are common for the application, and place them at a single place and reuse them instead of repeating it.
+
+1.Class & Object
+
+class:
+  *A class - in the context of Java — is a template used to create objects and to define object data types and methods.
+
+Properties of Java Classes:
+  *Class is not a real-world entity. It is just a template or blueprint or prototype from which objects are created.
+  *Class is a group of variables of different data types and a group of methods.
+A Class in Java can contain:
+ ->Data member
+ ->Method 
+ ->Constructor 
+ ->Nested Class
+ ->Interface
+----  
+
+Objects:
+  *Note: When we create an object which is a non primitive data type, it’s always allocated on the heap memory.
+-------
+Difference between cls and obj
+
+Class:
+   Class is the blueprint of an object. It is used to create objects.
+Object:
+   An object is an instance of the class.
+
+Class:
+   No memory is allocated when a class is declared.	
+Object:
+   Memory is allocated as soon as an object is created.
+
+Class:
+   A class is a group of similar objects.
+Object:
+   An object is a real-world entity such as a book, car, etc.
+
+Class:
+   Class is a logical entity.
+Object:
+   An object is a physical entity.
+
+Class:
+   A class can only be declared once.
+Object:
+   Objects can be created many times as per requirement.
+
+Class:
+   An example of class can be a car.	
+Object:
+   Objects of the class car can be BMW, Mercedes, Ferrari, etc.
+--------
+youtube reference:
+
+class:
+  *class specific properties,behaviours
+object:  
+  *obj specific properties,bejaviours.
+  *obj is instance of a class.
+  *obj is memory representation of a class.
+  *obj cann't exist without class
+
+
+obj create:
+new key word is use a create new obj name that class
+class_name obj; -->  obj is object of a class -->but not allocate meory -->thats like a reference
+obj=new class_Name(); --> when use new key word system allocate memory base on a class property --> that reference store a obj.
+
+____________________________________________________________________________________________________________________________________________________________
+day-18(.02.24)
+Inheritance:  -->link to grp of cls  -->(Derived new classes besed on existing class) or (Sharing obj between class's. ex; one cls obj act as both own cls & inherit cls obj).
+
+ It allows you to create a new class based on an existing class, inheriting the attributes and methods of the parent class. The class that is inherited from is called the "superclass" or "base class," and the class that inherits from it is called the "subclass" or "derived class."
+
+
+extends ->used to link a cls
+
+uses of not create in scratch (again one more time)
+
+1.Single   
+2.multi-level  
+3.multiple    
+4.hierarical  
+5.hybrid    
+
+
+parent cls ->child cls
+Super  cls -> sub cls
+Base cls -> Derived cls
+
+
+1.Single   
+  -->simple inheritance -> link one cls     --> A<-B
+
+2.multi-level  
+  --> link more than two cls    -->B point A and C point B   --> A <-- B <-- C
+
+3.multiple     
+  --> java does'nt support,so overcame that use interface
+
+4.hierarical 
+  --> single parent multiple child -->  one super class and more sub cls point only super cls --> A <- B, A <-c
+
+5.hybrid    
+  --> more than two type of inheritance that is hybrid inheritance -->  A super  cls and B A sub cls and B sub cls are C and D A <-- B <--C,B<-- D
+
+
+Syntax:
+class A{
+}
+class B extends A{
+}
+
+-----
+Accesmodifier:
+protected  -->instead of obj creation ->when private <-- static
+
+Key:
+super -->immidiate super cls --> only accessible in non-static key word  -->purposes of when ovverriding  one cls to another cls
+this  -->points the current cls global variable  -->purposes of ovverriding in current cls
+
+
+ex pro:
+class Car{
+protected int seats =10;
+}
+class Swift extends Car{
+}
+public class Innova extends Car{
+public static int seats=7;
+}
+
+public static void main(String []args){
+}
+
+----
+youtube reference:
+
+1.What?
+inheritance -> an obj of one class behaving as an obj of another class too.
+used to efficient of memory management.
+
+2.When?
+IS-A Relationship
+
+rules:
+IS-A Relationship
+ex:
+Bank  --> State Bank  
+      -->customer
+State Bank IS A Bank  --true,
+Customer IS A Banl.  -->false Condition is not statisfied
+
+3.How?
+By using extends in keyword.
+
+4.WHy?
+Efficient Memory Management.
+
+ 
+__________________________________________________________________________________________________________________________________________________________________________________
+day-19(22.02.24)
+
+Polymorphism:
+
+-->means Many forms  -->many morphing -->pala vadivam(mugangal)
+-->poly means many, morphs means forms
+-->polymorphism in java is concept by which we can perform a single action by different ways.
+
+
+
+1.Compile time --> Method overloading --> another name: Static polymorphism --> same method name whit different parameter or( with different num of arguments or with different type of arguments).
+ -->why call compile time polymorphism --> that program which mean by call known as compile time. 
+
+2.Run time --> Method overriding  -->another name: Dynamic polymorphism --> why call Run time Polymorphism --> extends method work with run time
+
+decition to which method when call 
+-->when it  compile time call that is compile time polymorphism  
+-->when it run time call that is run time polymorphism
+
+
+
+Method overloading:
+     --> same method name ,but different parameters
+
+ex:
+Method overloading:
+int add(int a){
+return a+5;
+}
+int add(int a,int b){
+return a+b;
+}
+double add(double a,double b)
+{return a+b;}
+
+----
+Method overriding: 
+     -->  method name and parameters are same.
+
+   -->overriding is for non-static method.overriding is not applicable for static method.
+
+ex: class A{
+void printHello(){
+sop("hai");}
+}
+class B extends A{
+void printHello(){
+sop("Test");
+}
+}
+________________________________________________________________________________________________________________________________________________________________________
+Day-20(27.02.24);
+
+Abstraction -> Data Hiding: -->(Showing only necessary and hiding unwanted data):that hiding a data manipulation. (or)abstraction is a process of hinding the implementation details and showing only functionality to the user.
+
+real time data hiding in when impliments,
+
+-->Abstraction can be achieved with either abstract classes or interfaces 
+
+abstraction:
+1.abstract class 
+2.interface
+
+
+
+-->  1. Abstract class: 
+
+why use abstract class:
+--?java abstract class is used to provide common method implementation to all the subclasses or to provide default implementation.
+
+is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+
+Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from). not definition method is abstract method. or no implimentation method
+ex: void add();
+
+abstract class -->hold abstract method and normal method.so that is not pure abstraction.var are commans can use. --> (sub class should be apstract or sub class should override abstract method work.)
+
+
+-->can contain a constructor.
+
+syntax:
+abstract class Main{
+abstract int add(int a);  //abstract keyword to mention that is abstract method
+int add(int a,int b){
+retrun a+b;
+}
+}
+-----------------------------
+ex pro:
+abstract class Father{
+void getLoan(){
+System.out.println("Getting Loans");
+}
+abstract void repay();
+
+}
+
+/*
+public class Son extends Father{
+public static void main(String[] args){
+// Father obj=new Father();   --> cannot create obj for abstract clss
+//obj.repay(); (or) obj.getLoan();   -->so, cann't call, so we use inheritance
+
+Son obj=new Son();
+obj.getLoan();
+//1.obj.repay();  -->occure error repay method cann't define  ,so we do difine method in son class
+obj.repay();
+}
+
+//2.
+void repay(){
+System.out.println("We will pay as soon");
+} 
+}*/
+
+
+//but we not interest to define repay method -->so u do change a clss to abstaract. for ex: 
+
+
+public abstract class Son extends Father{   //cannot create obj for abstract cls.so here we can't create obj
+public static void main(String[] args){
+
+}}
+
+/*----final key -->can't allow extends key. so give not both abstract and final key as same. 
+ex:
+public abstract final class Son extends Father------*/
+------------------------------------------------
+2.interface:
+
+-->Interface is a contract for number of classes.
+-->The keyword associated with interface is impliments.
+-->100% abstract class before java version 1.8.
+-->A class impliments more than one interface.
+
+-->To access the interface methods, the interface must be "implemented" (kinda like inherited) by another class with the implements keyword (instead of extends). The body of the interface method is provided by the "implement" class:
+
+-->cannot contain a constructor
+
+interface  -->hold abstract method.pure abstraction. var are commans can use.
+syntax:
+interface calc{
+int add(int a);
+int  sub(int b);
+int div(int a);
+}
+--impliments
+
+
+ex pro:
+interface Addition{
+int add(int a,int b);
+}
+public class Main impliments Addition{
+public int add(int a,int b){retrun a+b;}
+static void main(String[] args[]){
+
+Addition m=new Main();
+sop(m.add(5,9));
+}
+
+}
+
+-----
+ex pro2:
+// private interface EmpolyeeRules --> can't be private or protected.
+
+
+interface EmpolyeeRules{  // can compile ex: javac EmpolyeeRules.java
+int salary =25000;      //that var are by default, final and static
+int leaves=10;
+
+//private int leaves=10;  //error can't be private and protected.
+//protected public void maintainHours(); -->/error can't be nd protected.
+
+public void maintainHours();  //by default, they are abstract.
+public void relocate();       
+public void report();
+public void dress();
+}
+
+interface FamilyRules{
+public void takeCareParents();
+public void helpMembers();
+public void eatTogether();
+public void enjoy();
+}
+public class ABCEmployee implements EmpolyeeRules,FamilyRules{
+public static void main(String args[]){
+ABCEmployee  abc=new  ABCEmployee ();
+//EmpolyeeRules:
+abc.maintainHours();
+abc.relocate();
+abc.report();
+abc.dress();
+//abc.salary=35000;
+//abc.leaves=20;
+System.out.println(salary); // or(EmpolyeeRules.salary) or (ABCEmployee.slary). because abstract var are default final and static.
+System.out.println(leaves); // or (EmpolyeeRules.leaves) or (ABCEmployee.leaves)
+
+
+//FamilyRules
+abc.takeCareParents();
+abc.helpMembers();
+abc.eatTogether();
+abc.enjoy();
+
+FamilyRules father=new ABCEmployee();
+father.eatTogether();
+//father.report(); -->accure error.only access relevented of FamilyRules.
+//father.abcClass(); -->accure error
+}
+//FamilyRules:
+public void takeCareParents(){System.out.println("takeCareParents");}
+public void helpMembers(){System.out.println("helpMembers");}
+public void eatTogether(){System.out.println("eatTogether");}
+public void enjoy(){System.out.println("enjoy");}
+
+//EmpolyeeRules:
+public void maintainHours(){System.out.println("40 Hourse");}
+public void relocate(){System.out.println("Other City");}
+public void report(){System.out.println("Manager");}
+public void dress(){System.out.println("Neatly");}
+
+//ABCEmployee Method:
+public void abcClass(){
+System.out.println("ABC Employee");
+}
+}
+-----
+Dynamic Binding:
+
+-->parent cls reference point to the child cls memory reference.
+1.Parent ref=new Child();
+2.interface in=new impliment;
+-----------------------------------------------------------------------------------
+Member interface (or) Nested inter face: 
+--> is a member of another class or another interface.
+
+ex.pr:
+
+//Member interface or Nested interface.ex for a single person have own rules and follow.
+
+class Interface_Demo{
+
+public interface Rules{   // (or.can be) private interface Rules{
+public void setName();
+}
+}
+
+
+public class Nexted_Interface_Demo implements Interface_Demo.Rules{
+
+public static void main(String[] args){
+
+Nexted_Interface_Demo obj =new Nexted_Interface_Demo();
+
+obj.setName();
+obj.play();
+
+//Dynamic binding:
+Interface_Demo.Rules ref=new Nexted_Interface_Demo();
+ref.setName();
+//ref.play();
+}
+
+public void setName(){
+System.out.println("Vijay");
+}
+public void play(){
+System.out.println("playing");
+}
+}
+
+-----------------------------
+
+different between absract and interface.
+
+abstract:atleast one method are can be abstract.
+Interface:All methods are abstract.
+
+abstract: no
+Interface:All variables are final and static.
+
+abstract:Uses extends keyword
+Interface:interface uses impliments keyword
+
+abstract:Constructor is possible.
+Interface:Constructor is not possible.
+
+Interview:
+What is interface:
+--> Interface is set Of rules or constract.in java, we can create interface by using 'interface' Keyword. Once created, we can have variables and methods inside an interface. All variables are final and static in an interface. All methods are by default abstract.  we don't need to give abstract keyword in method signatures in interface. Interface are implemented using 'impliments' keyword. A Java class can impliment any number of interface. If we implement interface in a class, we should give definition for all methods.
+
+Interface discussion is not fullfilled without discussing about Dynamic binding.
+
+website_ref-->planet.paiyilagam.com
+---
+Notes:
+1.Non-Static variables,methods will have multiple (memory) copies for each object.
+2.Static variables and methods will maintain single copy.
+3.static variables and methods will be loaded first.
+4.Member Interface or Nested Interface - is a member of another class or another Interface.
+5.Member Interface can be private,protected or public.
+6.private variables can be present in any class (including abstract class).
+They can be accessed using getter and setter.
+
+java 8.
+
+*prior to java 8, all methods in an Interface are by default, abstract.
+*java 8 inctruduced default methods in Interface, Default Implementation is present in an Interface.
+____________________________________________________________________________________________________________________________________________________
+Day21(28.02.24):
+
+Encapsulation:  --> private access modifier.
+-->Hold group of private variable.
+DTO --> Data Transfer Object.  (consider kind of json obj)
+
+
+ex pro:
+class StudentDTO{
+private String name;
+private int age;
+ public String getName(){return name;}    //getter
+public void setName(String name){this.name=name;}    //setter
+}
+
+
+task: create DTO its containe 10 information.
+
+_______________________________________________________________________________________________________________________________________________________________
+Day22(29.02.24):
+
+interface:
+*static   -->depent on interface class ,only accessible in that class
+*default  -->accessibe extends class too.
+
+---------ex pro:
+
+interface Vehicle{
+
+static void start(){
+System.out.println("start");
+}
+
+default void stop(){ System.out.println("stop");}
+}
+
+class Car impliments Vehicle{
+public void stop(){ System.out.prinln("car Stop");}
+}
+
+public class Main{
+  car c=new car();
+//c.start(); error
+  c.stop();
+
+  Vehicle v=new Car();
+//v.start(); error
+  v.stop();
+
+  Vehicle.start();
+}
+
+--------------------
+Packages:
+
+-->collection of class and interface.
+-->code readablity
+
+package key --> define package.  -->package org.besant.courses;
+
+import  key --> import recuire package.  -->package org.besant.courses.*; (or) package org.besant.courses.Javacourse.java(Class_Name);
+
+
+compile time -->javac -d . Main.java --> current path mean by / or .
+
+run time --> java paths, --> ex:java org.mei.test.Main
+
+_____________________________________________________________________________________________________________________
+Day-23 (05.03.24):
+
+-->Eclips IDE download
+1.search -->perspective -->java-perspective
+2.file --> new--> other --> search java project --> next -->project name -->jRE-java se11-->next -->finish.
+
+protected key -->package level accessing.
+
+______________________________________________________________________________________________________________________________
+Day-24(06.03.24):
+
+
+Exception Handling:
+1.Exceptions -->can Handled. -->program wise mistake.
+2.Error   -->Can't Handled.  -->
+
+
+                     -->Exception --> 1.Checked Exceptions   --> 1.IOException, 2.SQLException, 3.ClassNotFoundException.
+                    |                 2.Unchecked Exceptions -->1.ArithmeticException, 2.NullPointerException,  3.IndexOutOfBoundsException -->
+                    |                                                                                                           
+                                                                                                               1.ArrayIndexOutOfBoundsException, 
+                    |                                                                                           2.StringOutOfBoundsException.
+ Obj <-- Throwable--|                
+                    |
+                     -->Errors -->1.StackOverFlowError, 2.VirtualMachineError, 3.OutMemoryError.
+
+
+
+
+1.Exception 
+   1.Compile time (checked exception)
+   2.Run time(unchecked exception)
+
+
+
+-->The Exception Handling in Java is one of the powerful mechanism to handle the  normal flow of the application can be maintained.
+-->Dictionary Meaning: Exception is an abnormal condition.
+-->In Java, an exception is an event that disrupts the normal flow of the program. It is an object which is thrown at runtime by jvm.
+--------------------------------------------------------------------------------
+2.Types of Java Exceptions:
+
+-->There are mainly two types of exceptions: checked and unchecked. An error is considered as the unchecked exception. However, according to Oracle, there are three types of exceptions namely:
+
+*Checked Exception
+*Unchecked Exception
+*Error
+
+Difference between Checked and Unchecked Exceptions:
+1) Checked Exception
+*Exception obj thrown as compile time. 
+The classes that directly inherit the Throwable class except RuntimeException and Error are known as checked exceptions. For example, IOException, SQLException, etc. Checked exceptions are checked at compile-time.
+
+2) Unchecked Exception
+*Exception obj thrown as run time. 
+The classes that inherit the RuntimeException are known as unchecked exceptions. For example, ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException, etc. Unchecked exceptions are not checked at compile-time, but they are checked at runtime.
+
+3) Error
+*accure External resource.
+Error is irrecoverable. Some example of errors are OutOfMemoryError, VirtualMachineError, AssertionError etc.
+
+-----------------------------------------------------------------------------------------
+3.Major reasons why an exception Occurs:
+*Invalid user input
+*Device failure
+*Loss of network connection
+*Physical limitations (out-of-disk memory)
+*Code errors
+*Opening an unavailable file
+
+
+Difference between Error and Exception:
+-->Error: An Error indicates a serious problem that a reasonable application should not try to catch.
+-->Exception: Exception indicates conditions that a reasonable application might try to catch.
+----------------------------------------------------------------------------------------------------------
+
+4.Advantage of Exception Handling
+->The core advantage of exception handling is to maintain the normal flow of the application. An exception normally disrupts the normal flow of the application; that is why we need to handle exceptions.
+-------------
+Exception KeyWord:
+1.Try
+2.Catch
+3.Finally
+4.Throws
+5.Throw.
+
+
+i)Try block: 
+*The "try" keyword is used to specify a block where we should place an exception code. It means we can't use try block alone. The try block must be followed by either catch or finally.
+
+-->try block should have catch or finally block or both.
+--> try block can multiple catch blocks.
+
+
+iii)Catch Block:
+*The "catch" block is used to handle the exception. It must be preceded by try block which means we can't use catch block alone. It can be followed by finally block later.
+
+   
+ii)Finally Keyword: 
+
+*The "finally" block is used to execute the necessary code of the program. It is executed whether an exception is handled or not.
+
+--> finally kewyword is desinged to address contingency.
+-->finally should be present after try block only when there is no catch block. If there are any Catch block,finally should 
+be present after try catch block.
+
+
+Catch vs Finally:
+-->finally block will get executed always irrespective of Exception occurs and  catch block will  get executed only when corresponding exception occurs.
+
+
+Handled Exception:
+
+use try,catch statement.
+
+syntaax:
+
+try{
+throw exception statemnts;
+}catch(){
+
+}
+
+
+
+finally block:
+kind of Inputstreame close (bufferreader);
+
+syntax: 
+
+try{
+throw exception statemnts;
+}catch(){
+
+}finally{
+//statemnet;
+}
+
+
+-------------------------------------------------
+ex pro:
+int a=10,b=0;
+try{
+c=a/b;
+}
+catch(Exception e){    //catch((known Particular eXception write here) e)
+c=0;
+sop("Exception");
+sop(e.getMessage());
+e.printStackTrace(); -->print full details into array.
+sop(e.getStackTrace()); -->return full details into array.
+sop(getCause());   --> descripe what causess?.
+}
+finally{
+sop("__");
+}
+}
+
+
+-------------
+refer stack.
+youtube refer:
+
+compile time  --> JDK
+run time --> JVM.
+
+1.What is Exception?
+
+ *Exception is the one, which makes our program to travel in abnormal route. and makes the program to stop abruptly.
+ *Whenever Exception occurs, JVM will throw a corresponding Exception Object.
+ 
+--> Whenever abonormal event occures, an object which is causing that abnormal event will be thrown.
+1.Who will throw? JVM will throw.
+2.To whom? to the Developer. 
+-----------------------------------------------------------------------------------------------------------
+Interview prepare:
+1.What is Exception?
+-- >An exception normally disrupts the normal flow of the application; 
+-->Whenever exceptional condition occurs,  JVM will throw a corresponding Exception Object and  stoped that program.
+-->can recoverable.
+
+
+----------------------------------------------------------------------------------------------------------
+2.Error and Exception-Difference?
+
+Error --> An Error is a subclass of Throwable that indicates serious problems that a reasonable application should not try to catch. Most such errors are abnormal conditions.  - Syntax Error,StackOverFlowError,MemoryError(server),OutOfMemoryError.
+-->Due to external resource.
+--> error is not recoverable.
+
+
+
+--------
+Stack Trace?
+-----------------------------------------
+Day-25(07.03.24):
+
+*paritally check Exception -->(checked Exception).
+
+ex pro:
+
+import java.io.BufferReader;
+import java.io.InputStreamReader;
+
+public class Main{
+public static void main(String[] args){
+String name;         //-->must declare name, does'nt thrown an error. because try block is not neccessary what reason its,will be define that var, are not,.
+try(BufferReader bf= new BufferReader(new InputStreamReader(System.in))){
+name=bf.readLine();
+}catch{
+name="error";
+e.printStackTrace();
+}
+finally{
+sop(name);
+}
+sop(name);
+}
+}
+}
+
+
+}
+} 
+
+
+*thorws -->used to with method define.
+*throw -->mannual exception.(user deifned Exception)
+  -->Explicity throwing Exception Object.
+
+throws:                                                 |  throw: 
+ *Throws is mentioned in method signature               |  *throw is mentioned in method body
+ *After throws, we can give any no. of Exception class  |  *After throw, we can mentioned only one Exception obj.
+ *Mainly for predefined Exceptions.                     |  *Throw is mainly used for User Defined Exceptions.
+
+
+Advantage of Exception Handling:   //refer: https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html
+*Code Readability,
+*Easy to handle.    
+*Propagating Errors Up the Call Stack.
+*Grouping and Differentiating Error Types.
+
+__________________________________________________________________________________________________________________________________________
+Day-26(12.03.24):
+
+thows and thorw.
+
+
+Scanner Class:
+1)import java.util.Scanner;  -->Package
+2)Cosntructor.
+
+Scanner: A simple text scanner which  can parse primitive types and strings. 
+Constructor: 
+Scanner(InputStream source)
+-->Constructs a new Scanner that produces values scanned from the specified input stream. 
+
+Scanner sc=new Scanner(System.in);
+
+int n=sc.nextInt();
+Double d=sc.nextDouble();
+String str=sc.nextLine();
+char c=sc.next().CharAt(0);
+char c=sc.nextLine().CharAt(0);
+
+Abstract_cls vs Final_cls:
+Abstract without use inheritance,and   can't instenciated(can't object created) fo that class.
+finall_class to can't  inheritance,so can't use  extence keyword.
+
+-->Class fields ->Global variables(Static,non-static).
+
+Notes:
+*Singleton pattern(singleton class): Means that class default constructor has private. so we can't create obj of the class.
+
+
+*Wrapper class:
+-->converting primitive datatype into non-primitive Datatype (or object).
+
+Auto Boxing:
+byte short int long char etc...
+corresponding Wrapper classes
+Byte Short Integer Long Character etc...
+
+ex:
+int a=5; // Variable of int datatype
+Integer b=5; //object of Integer class
+
+variable             vs      object
+fixed memory size           Dynamic memory
+can hold only values        referes to fields(global var) and methods
+
+_______________________________________________________________________________________________________________________________________________________________
+Day-27(13.03.24):
+
+
+Tesk:
+search -> how to  num of ways sort a array?
+
+
+Collections (collection of object): basiccaly collection is very big framework.  -->overcome a array drawback(ex:fixed memory size,continues memory,un used memory).
+-->its uses of simplefy the array.  -->all its initially is array.
+
+Any group of individual objects that are represented as a single unit is known as a Java Collection of Objects. In Java, a separate framework named the “Collection Framework” has been defined in JDK 1.2 which holds all the Java Collection Classes and Interface in it. 
+
+In Java, the Collection interface (java.util.Collection) and Map interface (java.util.Map) are the two main “root” interfaces of Java collection classes.
+
+
+package --> util.
+
+
+advantage:
+*performance: Dynamic array size,linked list,trees-->highly efficient.
+*algorithm
+*iterators
+
+why use Collections: --> it reduces programming effort while increasing performance.
+
+Notes:
+-->Generics introduce after jdk-5.usage of type safety. its means avoid runtime error(ClassCase Exception).
+
+----------------------------------------------------------------------------------------------------
+collection interface:
+
+                                          
+                     | collection  --> 1.List,2.Set,3.Queue
+Collection frameWork |
+                     | Map
+----------------------------------------------------------------------------------------------------
+
+list -->its allows duplicates.
+set -->its not allows dup.
+map-->its stored Key value pair.KEY is doesn't allow duplicate.
+
+
+List -->Array List,LinkedList. -->Stack (Vector)  -->Stored by nodes,its means elements stored with near element address too .(Single LinkedList [5,addres of next element],Doubly LinkedList[address of pre element,5,addres of next element]); 
+Set -->HashSet,LinkedHashSet.  -->SortedSet(TreeSet),-->Queue ,Deque.
+Map-->HashMap,LinkedHashMap.
+
+
+linked  key-->maintain insertion order. ex.linkedList,LinkedHashSet.
+
+
+stack -->first in last out.  -->access method ->push and pop. 
+queue -->first in first out.
+
+-------------------------------
+
+<> -->determine specific wapper class.
+
+---------------------------------
+List Interface:
+*Sub Interface of collection Interface.
+*Duplicate objects allowed.
+*Maintain Insertion Order 
+
+List Interface: An ordered collection.The user of this interface has precise control over where in the list each element is inserted.The user can access elements by their integer index, and search for elements in the list.
+
+Methods:
+1. void add(int i,Object o)  --> Stored a Object(element) in particular index.
+2.boolean addAll(int i,Collection c) -->add sub list(collections)(like as list or map or set) in particular index.
+3.Object get(int i)  -->get object(element) in particular index.
+4.int indexOf(Object o)  --> get index values of particular Object(element). ex: int indexOf("vj");
+5.int lastIndexOf(Object o)  --> get Last index values of particular dublicate Object(element). ex: int indexOf("vj");
+6.Object remove(int i)  -->  remove the first occurence of the specified element form this list.if it si present.
+7.Object set(int i,Object o)  ---> Replace a partiuclare index object(element) to given Object.
+8.List subList(int start,int end)-->[start to end -1] -->return a partiuclar list in a colletion of lists.
+9.clear()
+10.removeAll(collcetion c) --->remove a specified collection List.
+11.retainAll(collcetion c) --->contain only specified collection list, and remove to all reminder.
+12.set(index i,object o)   --> Replace a object is specified index.and return the previous element.
+13.subList(int fromIndex, int toIndex)  --> Returns a view of the portion of this list between the specified fromIndex,inclusive,and toIndex,exclusive.ex:                               list l2=l1.subList(3,6);  --> (if fromIdex and toIndex are equal,the returned list is empty.)
+
+method overloading approach:
+10.ListIterator listIterator();  --> returns an iterator to the start of the list.
+11.ListIterator listIterator(int i)  -->returns an iterator to the start of the list based on index value.
+ 
+
+
+----------------
+
+ArrayList:  1.Resizable Array implementation of the List interface.
+    -->depent on index.
+   -->manipulation slow.
+   add and remove manipulation slow but get manipulation fast.
+
+LinkedList: -->depent on nodes.but hava index value.
+--> single LinkedList  -->store the address of next value.
+           --> Doubly LinkedList
+ add and remove manipulation fast but get manipulation slow.
+
+
+
+expro:
+builk array:
+psvm(){
+Integer arr[]={1,10,20,200};
+ArrayList<Interger> li1=new ArrayList<>(Arrays.asList(arr));
+li1.add(30);
+li1.add(50);
+
+List<Integer> li2=new LinkedList(li);
+li2.add(2);
+li2.add(1);
+
+System.out.prinln(li2);
+}
+
+
+Array List:
+*Heterogeneouts Objects can store. (multiple wrapper class).
+*Null  object can Store.  
+*Data Structure - Growable Array.
+
+Constructor:
+1.ArrayList al=new ArrayList();  -->Empty ArrayList
+   based on capacity  -->default Capacity 10. 
+   follwing that (cuurent capacity *1.5)+1.
+2.ArrayList al= new ArrayList(int initialcapacity); -->empty arrayList
+3.ArrayList al=new ArrrayList(collection c);  -->store a collection into when inital arralyList.
+--------------------------------------------------
+Sample Program:
+
+import java.util.*;
+class SampleArrayList{
+static public  void main(String[] args){
+    ArrayList  al=new ArrayList();
+    System.out.println("ArrayList size"+ al.size());
+    al.add("A");
+    al.add("ABC");
+    al.add(5);
+    System.out.println("Now isze"+al.size());
+  System.out.println(al);
+  al.add("A");
+  System.out.println(al);
+  al.remove("ABC");
+  System.out.println(al);
+  al.addAll(al);
+  System.out.println(al);
+} 
+}
+----------------------------------------------------
+Sample Program:2
+//ArrayList  to Change Array.
+
+import java.util.*;
+class ArrayListToArray{
+public static void main(String args[]){
+    ArrayList<Integer> al=new ArrayList<Integer>();
+    Scanner sc=new Scanner(System.in);
+    System.out.println("You want to inset a Element Write\" Yes/ No\"");
+   char ch=sc.next().charAt(0);
+   int i=1;
+   while(ch=='Y' || ch=='y'){
+   al.add(i);
+   i++;
+    System.out.println("You want to again inset a Element Write\" Yes/No\"");
+       ch=sc.next().charAt(0);
+   }
+System.out.println(al);
+Integer arr[]=new Integer[al.size()];
+arr=al.toArray(arr);
+for(int el:arr)
+System.out.println(el);
+
+}
+}
+
+-----------------------------------------------------------------------------
+
+Diffrence between array and arrayList?
+
+   Array                            ArrayList
+1.Fixed length                      Dynamic size
+
+2.Performance good   based on       Not Good  Based on
+  Hardware resource                 Hardware resource  
+     
+3.Can Hold both Primitive           Only non-Primitive elements  
+   & Non-Prmitive
+
+4.No Build in methods for parsing 
+______________________________________________________________________________________________________________________________________________________________________________
+Day-28(14.03.24):
+
+iterals:(iteration):
+
+Collections.sort(li2);   //used to sort that array.
+
+List<Integer> li2=new LinkedList(li);
+li2.add(2);
+li2.add(1);
+
+Iterator iter=li2.iterator();
+while(iter.hasnext()){                      //hasnext() method use to check the next values is has or not.
+System.out.println(iter.next());            //next()  method used to give current pointer value and that method  moved pointer to next value.
+}
+-----
+Set:  not allow duplicate.   -->comparly slower than Lists.
+*HashSet    
+*LinkedHashSet
+*TreeSet(SortedSet)  -->sorted the element -->
+________________________________________________________________________________________________________________________________________________________________________________________
+Day-29(15.03.24):
+
+Lenear -->index wise store
+NOn Lenear --> not index vise store
+
+Set:
+1.HashSet
+2.LinkedHashSet (LinkedList+HashSet)
+
+
+refere -> Hash table
+Hash: depend on reference. Hash have  Hash function,its uses of give random address  to Store a value in HashTable ,its a function generate random address and give to.
+
+Hash is a function , its can give Generate random address of a value. 
+Ex: --> "Mei"  --> Hash Generate random address of that value -->Hash Table --> Hasharr[3]="mei";
+-->"Mei" ---> Hash Function --> HashTable -->generate random address.
+
+Advantage:
+Manipulation are can same time,because has have all values address.
+
+
+
+Map:
+1.HashMap
+2.LinkedHashMap (LinkedList+HashMap)
+__________________________________________________________________________________________________________________________________________________________________________
+Day-30(18.03.24):
+Day-31(19.03.24):
+
+Collections Methods
+
+_____________________________________________________________________________________________________________________________________________________________________________________
+Day-32(20.03.24):
+comparator: 
+
+A comparator interface is used to order the objects of user-defined classes. A comparator object is capable of comparing two objects of the same class. Following function compare obj1 with obj2.
+
+Syntax: 
+
+public int compare(Object obj1, Object obj2):
+
+expro:
+import java.util.Arrays;
+import java.util.Comparator;
+class ComparatorDemo{
+    public static void main(String []args){
+        String []name={"vijay","john","vinoth kumar","affan","dinesh"};
+        Arrays.sort(name);
+        for(String s:name){
+        System.out.println(s);
+        }  
+      Comparator comp=new  ExtendsComparatorClass(); //Comparator<String>
+      Arrays.sort(name,comp);
+      System.out.println("After Compare:");
+         for(String st:name){
+        System.out.println(st);
+    }
+    
+    }
+}
+
+//Comparator usage of sort the element in ascending or descending oder.
+class ExtendsComparatorClass implements Comparator{  // typecasting can have Comparator<String>
+
+    public int compare(Object o1,Object o2){  //      public int compare(String o1,String o2){
+        String s1=(String)o1; //typecaste
+        String s2=o2.toString(); //typecaste
+        if(s1.length()>s2.length()){
+            return -1;
+        }else if(s1.length()<s2.length()){
+            return +1;
+        }
+        else{
+            return 0;
+        }
+    }
+}

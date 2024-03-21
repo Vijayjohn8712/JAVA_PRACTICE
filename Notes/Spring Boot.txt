@@ -1,0 +1,30 @@
+Spring Boot:
+Spring boot is a open-source java-based Framework.
+
+Spring Boot can use two tools:
+1.eclipse.
+2.Spring tool suite.
+
+
+search -->Spring initializr
+
+
+spring boot default version -->3.2.3
+
+spring boot its called mvc  --> m-model --> var a,b,c,
+                                v-view --> jsp file,
+                                c-controller --> controll move to external page.
+
+controller creation.
+packge creation:
+
+Demo class main package -->      com.example.Demo
+so create controller package -->com.example.Demo.Controller
+
+pom.xml must have two dependancy: -->spring-boot-starter-web,spring-boot-starter-test
+
+@ --> annotation  -->package ->org.springframework.web.bind.annotation.RestController;
+
+
+What is controller:
+im Spring Boot, the controller class is responsible for processing incoming REST API equests, preparing a model,and retruning the view to be rendered as a response.
