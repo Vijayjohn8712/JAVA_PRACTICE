@@ -1,0 +1,31 @@
+class SubClass{
+public static void main(String[] args){
+
+SuperClass obj =new SubClass();
+
+System.out.println(obj.name);
+
+int name ="john";
+void hlo()
+{
+System.out.println("hlo");
+}
+
+void myName(){
+System.out.println("My Name is vijay ");
+}
+
+}
+}
+
+
+
+
+class SuperClass{
+
+int name="Vijay";
+void hi()
+{
+System.out.println("hi");
+}
+}
