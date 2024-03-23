@@ -1453,7 +1453,9 @@ Tesk:
 search -> how to  num of ways sort a array?
 
 
-Collections (collection of object): basiccaly collection is very big framework.  -->overcome a array drawback(ex:fixed memory size,continues memory,un used memory).
+Collections (collection of object): basiccaly collection is very big framework.  -->overcome a array drawback(ex:fixed memory size,continues memory,un used memory).Some collections allow duplicate elements and others do not.some  are order and other unorder.
+
+
 -->its uses of simplefy the array.  -->all its initially is array.
 
 Any group of individual objects that are represented as a single unit is known as a Java Collection of Objects. In Java, a separate framework named the “Collection Framework” has been defined in JDK 1.2 which holds all the Java Collection Classes and Interface in it. 
@@ -1522,27 +1524,49 @@ Methods:
 8.List subList(int start,int end)-->[start to end -1] -->return a partiuclar list in a colletion of lists.
 9.clear()
 10.removeAll(collcetion c) --->remove a specified collection List.
-11.retainAll(collcetion c) --->contain only specified collection list, and remove to all reminder.
+11.retainAll(collcetion c) --->contain only specified collection list, and remove to all reminder.opposide of removeAll().
 12.set(index i,object o)   --> Replace a object is specified index.and return the previous element.
 13.subList(int fromIndex, int toIndex)  --> Returns a view of the portion of this list between the specified fromIndex,inclusive,and toIndex,exclusive.ex:                               list l2=l1.subList(3,6);  --> (if fromIdex and toIndex are equal,the returned list is empty.)
+14.clone()  --> it used to clone a object  ex: ArrayList ar1=(LinkedList)ar.clone().
 
 method overloading approach:
 10.ListIterator listIterator();  --> returns an iterator to the start of the list.
 11.ListIterator listIterator(int i)  -->returns an iterator to the start of the list based on index value.
- 
-
 
 ----------------
 
-ArrayList:  1.Resizable Array implementation of the List interface.
+1.Resizable Array implementation of the List interface.
     -->depent on index.
    -->manipulation slow.
    add and remove manipulation slow but get manipulation fast.
 
-LinkedList: -->depent on nodes.but hava index value.
+LinkedList: -->depent on nodes.have index,but element stored in linked wise.
 --> single LinkedList  -->store the address of next value.
            --> Doubly LinkedList
  add and remove manipulation fast but get manipulation slow.
+
+
+Different between:
+--------------------
+LinkedList:              -   ArrayList:
+
+1.Element insertion        1.Elements insertion is faster.
+  is not faster
+
+2.Element retrival is      2.Element retrival is slow.
+not faster
+
+LinkedList:
+special methods:
+addFirst()
+addLast()
+removeFirst()
+removeLast()
+getFirst()
+getLast()
+offer() /offerFirst() / offerLast()
+poll() / pollFirst() / pollLast()
+
 
 
 
@@ -1634,9 +1658,15 @@ Diffrence between array and arrayList?
 3.Can Hold both Primitive           Only non-Primitive elements  
    & Non-Prmitive
 
-4.No Build in methods for parsing 
+4.No Build in methods for parsing    5.its has build in method.
+------------------------------------------------
+Collection  class methods:
+1.Collcetion.binarySearch(list,key) / Collection.binarySearch(list,key,c)
+2.Collection.reverse();
 ______________________________________________________________________________________________________________________________________________________________________________
 Day-28(14.03.24):
+
+cursors:A Java Cursor is an Iterator used to iterate or traverse or retrieve a Collection or Stream object's elements one by one
 
 iterals:(iteration):
 
@@ -1655,11 +1685,13 @@ Set:  not allow duplicate.   -->comparly slower than Lists.
 *HashSet    
 *LinkedHashSet
 *TreeSet(SortedSet)  -->sorted the element -->
+
+
 ________________________________________________________________________________________________________________________________________________________________________________________
 Day-29(15.03.24):
 
 Lenear -->index wise store
-NOn Lenear --> not index vise store
+Non Lenear --> not index vise store
 
 Set:
 1.HashSet
@@ -1733,3 +1765,29 @@ class ExtendsComparatorClass implements Comparator{  // typecasting can have Com
         }
     }
 }
+_____________________________________________________________________________________________________________________________________________________________________
+Day-33(22.03.24);
+
+Stack and Queue,Dequeue:  -->Stack is a Class and Queue,Dequeue are interface.
+
+Stack(LIFO):
+methodS:
+push() -->add element.
+pop()  -->remove element & return element.
+peek()  -->returns value.
+
+
+Queue(FIFO):  subclass -->PriorityQueue.
+add() 
+offer()
+poll() -->removes elements and return value
+peek()  -->returns next top priority  remove value.
+
+Dequeue: subclass -->ArrayQueue,LinkedList (De stands for Double ended)
+add() 
+offer()
+poll() -->removes elements and return value
+peek()  -->returns value.
+
+addFirst()
+addLast()
