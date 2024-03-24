@@ -48,7 +48,16 @@ public class Collection2{
       ts.add("G");
       ts.add("H");
       ts.add("I");
-      System.out.println(ts);
+      ts.add("J");
+      ts.add("K");
+      ts.add("B");
+      ts.add("C");
+      System.out.println("befor headset"+ts);
+      System.out.println(ts.headSet("H"));
+      System.out.println(ts.tailSet("H"));
+      System.out.println("Subset Elements are"+ts.subSet( "C","K"));
+
+
        System.out.println("Contains Set "+ ts.contains("I"));
         ts.clear();
       System.out.println(ts);
