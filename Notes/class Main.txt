@@ -1432,7 +1432,7 @@ Notes:
 *Wrapper class:
 -->converting primitive datatype into non-primitive Datatype (or object).
 
-Auto Boxing:
+Auto Boxing:  Converting primitive variable into corresponding Wrapper class obj.
 byte short int long char etc...
 corresponding Wrapper classes
 Byte Short Integer Long Character etc...
@@ -1440,6 +1440,9 @@ Byte Short Integer Long Character etc...
 ex:
 int a=5; // Variable of int datatype
 Integer b=5; //object of Integer class
+
+Auto UnBoxing:
+Converting Wrapper class object into corresponding primitive datatype variable.
 
 variable             vs      object
 fixed memory size           Dynamic memory
@@ -1454,6 +1457,11 @@ search -> how to  num of ways sort a array?
 
 
 Collections (collection of object): basiccaly collection is very big framework.  -->overcome a array drawback(ex:fixed memory size,continues memory,un used memory).Some collections allow duplicate elements and others do not.some  are order and other unorder.
+
+collection is also interface.
+
+Collcetion has morethan dozen of interfaces.
+that some examples are, *List interface,Comparator Interface,Iterator
 
 
 -->its uses of simplefy the array.  -->all its initially is array.
@@ -1666,20 +1674,85 @@ Collection  class methods:
 ______________________________________________________________________________________________________________________________________________________________________________
 Day-28(14.03.24):
 
-cursors:A Java Cursor is an Iterator used to iterate or traverse or retrieve a Collection or Stream object's elements one by one
+cursors:A Java Cursor is an Iterator used to iterate  or retrieve a object's or  elements one by one form Collection.
+   1.forEach lop: 
+        syntax: for(Object o:List){//statement;}
+      
+      drowback of forEach:
+              1.Only forward Direction
+              2.Cannot modify the contents of the collection. so,its overcome by cursors.
 
-iterals:(iteration):
 
-Collections.sort(li2);   //used to sort that array.
+  cursors:
+   1.Enumeration -->legacy classes(like stack,vector)
+   2.Iterator
+   3.ListIterator
+   4.Spliterator.
 
+Iterator: An iterator over a collection.
+  1.iterators allow the caller to remove elements from the underlying collection.
+  2.Methods --> hasNext()  -> Returns true if the iteration has more elements.
+                next()  --> Returns the next element in the iteration.
+                remove() -->remove from the underlying collection the last element returned by the iterator.
+
+      
+      drowback of Iterator:
+              1.Only forward Direction(single Direction).
+
+ex pro:
 List<Integer> li2=new LinkedList(li);
 li2.add(2);
 li2.add(1);
+li2.add(6);
+li2.add(8);
+li2.add(4);
 
-Iterator iter=li2.iterator();
+Iterator iter=li2.iterator(); //return datatype Iterator obj.
 while(iter.hasnext()){                      //hasnext() method use to check the next values is has or not.
-System.out.println(iter.next());            //next()  method used to give current pointer value and that method  moved pointer to next value.
+  if(iter.next().equals(6){
+       iter.remove();
+       }
+  System.out.println(iter.next());            //next()  method used to give current pointer value and that method  moved pointer to next value.
 }
+             ---------------------------
+
+2.ListIterator(Bidirectinal cursor): An iterator over a collection to both forward and backward(previous). 
+      1.same behaving of Iterator,but one differe its can move previous direction.
+      2.Methods, hasNext(),hasPrevious(),next(),previous(),remove(),previousIndex(),set(Objact o),add(obj o).
+       
+
+ex pro:
+List<Integer> li2=new LinkedList(li);
+li2.add(2);
+li2.add(1);
+li2.add(6);
+li2.add(8);
+li2.add(4);
+
+ListIterator liter=li2.listIterator(); //return datatype Iterator obj.
+       liter.add(10);                       //add first,because cursor is stands first.
+while(liter.hasnext()){                      //hasnext() method use to check the next values is has or not.
+  if(liter.next().equals(6){
+     //liter.remove();
+     liter.set(19);
+       }
+  System.out.println(liter.next());            //next()  method used to give current pointer value and that method  moved pointer to next value.
+}
+        ----------------------------------
+3.spliterator: (parlel iteration).
+
+diffrence:
+
+forEach                          Iterator                    ListIterator
+
+1.only move forward             same also                   Bidirectional,move both forward and backward.
+2.cannot modify the             its remove a elements        its remove elements,add,set,move on previous element,find previous elements index value,find previous elements.
+
+  contants of the collection
+
+-----------------------------------------------------------
+Collections.sort(li2);   //used to sort that array.
+
 -----
 Set:  not allow duplicate.   -->comparly slower than Lists.
 *HashSet    
@@ -1693,11 +1766,23 @@ Day-29(15.03.24):
 Lenear -->index wise store
 Non Lenear --> not index vise store
 
-Set:
-1.HashSet
+Set: 
+  
+  1.its doesn't allow duplicates.
+  2.*it allows the constant execution time for add,contains,remove,size.*
+ 
+subclasses are:
+1.HashSet        
 2.LinkedHashSet (LinkedList+HashSet)
+3.SortedSet --> NagableSet -->TreeSet 
+--------------------------------------------------------------
+Diffrence:
 
+HashSet                            LinkedHashSet
 
+1.no insertion order maintain      Insertion order Maintain.
+2.DS:HashTable                     HashTable+LinkedList.
+            ------------------------------
 refere -> Hash table
 Hash: depend on reference. Hash have  Hash function,its uses of give random address  to Store a value in HashTable ,its a function generate random address and give to.
 
@@ -1708,11 +1793,194 @@ Ex: --> "Mei"  --> Hash Generate random address of that value -->Hash Table --> 
 Advantage:
 Manipulation are can same time,because has have all values address.
 
+interview Questions:
+how do you convert collection into array?
+toArray() method.               //but that array is Object class array,so its return a object class obj.
+ex: Collection obj.toArray();
 
 
+TreeSet:
+   1.usage of sorted the element(obj).
+  1.hetrogenious obj not allow   -->its give throw ClassCastException
+ 2.null values does not allow         --> it give NullPointerException.
+
+special Methods are:  -->its return type SortedSet obj.
+headSet(obj o),     -->It returns the set whose elements are less than toElement
+tailSet(obj o),  --> The method returns the portion of the values in a sorted manner that is greater than the element mentioned in the parameter, including the parameter.
+subSet(obj initial,obj end).  -->The above method returns a view of the portion of the set whose element lies in the range between fromElement, inclusive to toElement,
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Map:
-1.HashMap
+  *unique interface of collection framwork.(because is not a sub interface of Collection Interface). 
+  *Representing group of key-value Pair obj
+  *its doesn't allow duplicate keys  but allow duplicate values.
+  *Key-value pair is knows as "Entry".
+
+Notes:Map interface provides three collection views,which allow a map's contents to be viewed as a set of keys,collcetion of values,or set of key-value mappings(Entry).
+
+Map methods:
+
+with return type 
+    Object put(Object key,Object value)
+    void   putAll(Map m)
+    Object get(Object key)
+    Object remove(Object Key)
+    boolean containsKey(Object key)
+    boolean containsValue(Object Key)
+    int   size()
+    boolean isEmpty()
+    void clear()
+    
+    //Collcetion views methods. Map spl methods
+    set keySet()
+    Collection values()
+    set entrySet()
+
+Entry interface: Entry is a nested interface.
+  what is Entry  -->Each key-value pair is Entry.
+
+ Entry methods are:
+    getKey()
+    getValue()
+    setValue()
+
+
+
+Sub classes are:
+1.HashMap                               
 2.LinkedHashMap (LinkedList+HashMap)
+3.SortedMap(i) -->NavigableMap -->TreeMap
+ 
+       -----------
+difference:
+
+HashMap                 LinkedHashMap
+Ds: HashTable           HashTable+LinkedList
+No insertion order      insertion Order Maintain
+
+1.HashMap:
+
+     ------------------
+TreeMap:
+
+Ds:Red-Black-Tree
+No insertion order
+Sorting-based on keys
+Hetrogeneous objects not allow
+null value is not allowed.
+
+splmethods:
+
+	firstEntry();
+	lastEntry();
+
+ex Pro:package javapractice;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class HashMapDemo {
+public static void main(String[] args) {
+	
+	HashMap hm=new HashMap();
+	hm.put("Suriya", 100);
+	hm.put("vino", 101);
+	hm.put("vijay", 102);
+	
+	System.out.println(hm);
+	
+	Set s=hm.keySet();
+	System.out.println(s);
+	
+	Collection c=hm.values();
+	System.out.println(c);
+	
+	Set es=hm.entrySet();
+	System.out.println(es);
+	
+	System.out.println(hm.containsKey("vino"));
+	System.out.println(hm.containsValue("200"));
+	
+	Iterator i=es.iterator();
+	while(i.hasNext()) {
+		Map.Entry me=(Map.Entry)i.next(); 
+//		System.out.println(i.next());    -->i.next() return datatype is Object class Obj.
+//		System.out.println(me.getKey() +" : "+me.getValue());
+		if(me.getKey().equals("vino")) {
+//			System.out.println(me.getValue());
+			me.setValue(200);
+		}
+		System.out.println("after set value "+me);
+	}
+	
+	
+	//TreeMap
+	
+	TreeMap tm=new TreeMap();
+	tm.put(101,"vijay");
+	tm.put(105,"john");
+	tm.put(103,"vino");
+	tm.put(102,"affan");
+	System.out.println(tm);
+	
+	TreeMap tm2=new TreeMap();
+	tm2.putAll(tm);
+	System.out.println(tm2);
+	
+	System.out.println(tm2.firstEntry());
+	System.out.println(tm2.lastEntry());
+	
+
+}
+}
+       -----------------
+Poperties class(sub class of Map interface);
+ 
+one of the usage of read a file and update a file data.
+
+ex pro:
+
+text file:
+datas:
+
+Dosai=25
+Idli=10
+Vadai=7
+
+Program:
+
+package javapractice;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+public class PropertiesDemo {
+	public static void main(String args[]) throws IOException {
+Properties p=new Properties();   //legacy class.
+//usage of FileInputStream read a file.
+FileInputStream fis=new FileInputStream("C:\\Users\\vjjoh\\eclipse-workspace\\javapractice\\src\\javapractice\\test.properties");  //its take a file into input.
+	
+	p.load(fis);
+	System.out.println(p);
+	String ss=p.getProperty("Dosai");
+	System.out.println(ss);
+     p.setProperty("Dosai","25");
+ 	System.out.println(p);
+ 	
+ 	FileOutputStream fos=new FileOutputStream("C:\\Users\\vjjoh\\eclipse-workspace\\javapractice\\src\\javapractice\\test.properties");
+    p.store(fos,"Udated Price");
+    System.out.println(p);
+    p.
+}
+}
+
+
+
 __________________________________________________________________________________________________________________________________________________________________________
 Day-30(18.03.24):
 Day-31(19.03.24):
