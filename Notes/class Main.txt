@@ -88,6 +88,7 @@ datatype:
 
 4.Float -(Float[4],Double[8]) ->The precision of float is only six or seven decimal digits, while double variables have a precision of about 15 digits.  ->store only decimal value
 
+
  folat ->A floating point number can also be a scientific number with an "e" to indicate the power of 10, ex:3e4;
 
 ex:boolean isValid=true;
@@ -1461,7 +1462,7 @@ Collections (collection of object): basiccaly collection is very big framework. 
 collection is also interface.
 
 Collcetion has morethan dozen of interfaces.
-that some examples are, *List interface,Comparator Interface,Iterator
+that some examples are, *List interface,Set interface,Queue Interface,Comparator Interface,Iterator,
 
 
 -->its uses of simplefy the array.  -->all its initially is array.
@@ -1482,7 +1483,7 @@ advantage:
 why use Collections: --> it reduces programming effort while increasing performance.
 
 Notes:
--->Generics introduce after jdk-5.usage of type safety. its means avoid runtime error(ClassCase Exception).
+-->Generics introduce after jdk-1.5.usage of type safety. its means avoid runtime error(ClassCast Exception).<>
 
 ----------------------------------------------------------------------------------------------------
 collection interface:
@@ -1490,7 +1491,7 @@ collection interface:
                                           
                      | collection  --> 1.List,2.Set,3.Queue
 Collection frameWork |
-                     | Map
+                     | Map  --HashMap,LinkedHashMap
 ----------------------------------------------------------------------------------------------------
 
 list -->its allows duplicates.
@@ -1558,11 +1559,11 @@ Different between:
 --------------------
 LinkedList:              -   ArrayList:
 
-1.Element insertion        1.Elements insertion is faster.
-  is not faster
+1.Element add abd remove        1.Elements insertion is slow.
+  is fast
 
-2.Element retrival is      2.Element retrival is slow.
-not faster
+2.Element retrival is         2.Element retrival is fast.
+slow
 
 LinkedList:
 special methods:
@@ -1595,7 +1596,7 @@ System.out.prinln(li2);
 
 
 Array List:
-*Heterogeneouts Objects can store. (multiple wrapper class).
+*Heterogeneous Objects can store. (multiple wrapper class).
 *Null  object can Store.  
 *Data Structure - Growable Array.
 
@@ -1674,7 +1675,7 @@ Collection  class methods:
 ______________________________________________________________________________________________________________________________________________________________________________
 Day-28(14.03.24):
 
-cursors:A Java Cursor is an Iterator used to iterate  or retrieve a object's or  elements one by one form Collection.
+cursors class:A Java Cursor is an Iterator used to iterate  or retrieve a object's or  elements one by one form Collection.
    1.forEach lop: 
         syntax: for(Object o:List){//statement;}
       
@@ -1685,8 +1686,8 @@ cursors:A Java Cursor is an Iterator used to iterate  or retrieve a object's or 
 
   cursors:
    1.Enumeration -->legacy classes(like stack,vector)
-   2.Iterator
-   3.ListIterator
+   2.Iterator -Interface
+   3.ListIterator -interface
    4.Spliterator.
 
 Iterator: An iterator over a collection.
@@ -1716,7 +1717,7 @@ while(iter.hasnext()){                      //hasnext() method use to check the 
 }
              ---------------------------
 
-2.ListIterator(Bidirectinal cursor): An iterator over a collection to both forward and backward(previous). 
+2.ListIterator(Bidirectinal cursor): An iterator over a collection on move to both forward and backward(previous). 
       1.same behaving of Iterator,but one differe its can move previous direction.
       2.Methods, hasNext(),hasPrevious(),next(),previous(),remove(),previousIndex(),set(Objact o),add(obj o).
        
@@ -1747,7 +1748,6 @@ forEach                          Iterator                    ListIterator
 
 1.only move forward             same also                   Bidirectional,move both forward and backward.
 2.cannot modify the             its remove a elements        its remove elements,add,set,move on previous element,find previous elements index value,find previous elements.
-
   contants of the collection
 
 -----------------------------------------------------------
@@ -1783,7 +1783,7 @@ HashSet                            LinkedHashSet
 1.no insertion order maintain      Insertion order Maintain.
 2.DS:HashTable                     HashTable+LinkedList.
             ------------------------------
-refere -> Hash table
+refere -> Hash table.
 Hash: depend on reference. Hash have  Hash function,its uses of give random address  to Store a value in HashTable ,its a function generate random address and give to.
 
 Hash is a function , its can give Generate random address of a value. 
@@ -1791,7 +1791,7 @@ Ex: --> "Mei"  --> Hash Generate random address of that value -->Hash Table --> 
 -->"Mei" ---> Hash Function --> HashTable -->generate random address.
 
 Advantage:
-Manipulation are can same time,because has have all values address.
+Manipulation are can same time,because hash have all values address.
 
 interview Questions:
 how do you convert collection into array?
@@ -1801,8 +1801,8 @@ ex: Collection obj.toArray();
 
 TreeSet:
    1.usage of sorted the element(obj).
-  1.hetrogenious obj not allow   -->its give throw ClassCastException
- 2.null values does not allow         --> it give NullPointerException.
+   2.hetrogenious obj not allow   -->its give throw ClassCastException.
+   3.null values does not allow         --> it give NullPointerException.
 
 special Methods are:  -->its return type SortedSet obj.
 headSet(obj o),     -->It returns the set whose elements are less than toElement
@@ -1811,7 +1811,7 @@ subSet(obj initial,obj end).  -->The above method returns a view of the portion 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Map:
   *unique interface of collection framwork.(because is not a sub interface of Collection Interface). 
-  *Representing group of key-value Pair obj
+  *Representing group of key-value Pair obj.
   *its doesn't allow duplicate keys  but allow duplicate values.
   *Key-value pair is knows as "Entry".
 
@@ -1825,17 +1825,17 @@ with return type
     Object get(Object key)
     Object remove(Object Key)
     boolean containsKey(Object key)
-    boolean containsValue(Object Key)
+    boolean containsValue(values)
     int   size()
     boolean isEmpty()
     void clear()
     
     //Collcetion views methods. Map spl methods
-    set keySet()
+    set keySet()              
     Collection values()
     set entrySet()
 
-Entry interface: Entry is a nested interface.
+Entry interface: Entry is a nested interface of Map.
   what is Entry  -->Each key-value pair is Entry.
 
  Entry methods are:
@@ -1866,9 +1866,9 @@ Ds:Red-Black-Tree
 No insertion order
 Sorting-based on keys
 Hetrogeneous objects not allow
-null value is not allowed.
 
-splmethods:
+
+spl methods:
 
 	firstEntry();
 	lastEntry();
@@ -1975,7 +1975,7 @@ FileInputStream fis=new FileInputStream("C:\\Users\\vjjoh\\eclipse-workspace\\ja
  	FileOutputStream fos=new FileOutputStream("C:\\Users\\vjjoh\\eclipse-workspace\\javapractice\\src\\javapractice\\test.properties");
     p.store(fos,"Udated Price");
     System.out.println(p);
-    p.
+    
 }
 }
 
@@ -2048,7 +2048,7 @@ peek()  -->returns value.
 Queue(FIFO):  subclass -->PriorityQueue.
 add() 
 offer()
-poll() -->removes elements and return value
+poll()  -->removes elements and return value
 peek()  -->returns next top priority  remove value.
 
 Dequeue: subclass -->ArrayQueue,LinkedList (De stands for Double ended)
@@ -2059,3 +2059,33 @@ peek()  -->returns value.
 
 addFirst()
 addLast()
+______________________________________________________________________________________________________________________________________________________________________________
+Day-34(27.03.24):
+
+File Handling:
+
+package -->java.io
+
+1.File:
+
+obj Creation:
+
+File file=new File("file/folder path");   -->give exist file/new file
+ 
+      1.create NewFile()   |  mkdir();   -->create folder.
+      2.delete()    -->can delete both file or folder.
+
+
+2FileReader | FileWriter:
+  
+obj creation  --> FileReader reader=new FileReader();           -->it is can't read indipendently.  it is has read();
+                  FileWriter writer=new FileWriter();    -->it has write().   
+
+methods:
+  1.exists();
+  2.write();    -->override exist data
+  3.append();   -->append with exist data.
+  4.read();
+  
+
+  
