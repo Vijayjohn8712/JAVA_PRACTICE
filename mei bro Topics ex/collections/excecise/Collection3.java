@@ -8,17 +8,19 @@ class Collection3{
         st.push("John");
         st.push("Vinoth");
         System.out.println(st);
+        System.out.println(st.peek());
         System.out.println(st.pop());
-          System.out.println(st.peek());
+        System.out.println(st);
+         
 
      //Queue:
      PriorityQueue<String> qu=new PriorityQueue<>();
-     qu.add("d");
+     qu.offer("d");
      qu.offer("b");
      qu.offer("c");
      System.out.println(qu); 
-     System.out.println(qu.poll());
      System.out.println(qu.peek());   
+     System.out.println(qu.poll());
        System.out.println(qu);    
 
     //Deque:

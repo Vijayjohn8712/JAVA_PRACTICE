@@ -1,25 +1,22 @@
-import java.util.HashSet;
-import java.util.List;
-import java.util.Comparator;
+
+
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedList;
 
 public class Task1 {
  public static void main(String[] args) {
 
-    ArrayList<Integer> al=new ArrayList<Integer>();
+    // ArrayList al=new ArrayList();
+    LinkedList<Integer> al=new LinkedList<>();
     al.add(5);
     al.add(7);
     al.add(6);
-    al.add(3);
     al.add(1);
     al.add(8);
     al.add(4);
 
-
-    Collections.sort( al);
-
-
+    Collections.sort(al);
     System.out.println(al.get(al.size()-1));
 
     

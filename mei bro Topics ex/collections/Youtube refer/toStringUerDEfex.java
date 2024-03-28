@@ -22,6 +22,7 @@ public class toStringUerDEfex{
 }
 }
 
+//Laptop:
  class Laptop {
     String model;
     int price;
@@ -40,6 +41,7 @@ public class toStringUerDEfex{
      }
 }
 
+//Comparator:
 class ComparatorDemo implements Comparator {
 
     public int compare(Object o1,Object o2){
