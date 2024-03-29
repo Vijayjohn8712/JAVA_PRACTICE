@@ -1760,11 +1760,14 @@ Set:  not allow duplicate.   -->comparly slower than Lists.
 *TreeSet(SortedSet)  -->sorted the element -->
 
 
-________________________________________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________
 Day-29(15.03.24):
 
 Lenear -->index wise store
 Non Lenear --> not index vise store
+
+Homogeneous and Hetrogeneous objects:
+"homo-" means same, "hetero-" means different. In any case if a single Java array can only store one type, say, only numbers, or only strings then it is homogeneous. If multiple types then heterogeneous
 
 Set: 
   
@@ -1849,7 +1852,21 @@ Sub classes are:
 1.HashMap                               
 2.LinkedHashMap (LinkedList+HashMap)
 3.SortedMap(i) -->NavigableMap -->TreeMap
+4.IdentityHashMap
+5.WeakHashMap
+6.Properties. -->it is child class of HashTable class.
+     *(It is used to maintain a list of values in which the key is a string and the value is also a string i.e; it can be used to store and retrieve string type data from the properties file.)
+
+     *The Properties can be saved to a stream or loaded from a stream.
+
  
+Features of Properties class:
+
+Properties is a subclass of Hashtable.
+  *It is used to maintain a list of values in which the key is a string and the value is also a string i.e; it can be used to store and retrieve string type data from the properties file.
+ *Properties class can specify other properties list as it’s the default. If a particular key property is not present in the original Properties list, the default properties will be searched.
+ *Properties object does not require external synchronization and Multiple threads can share a single Properties object.
+  *Also, it can be used to retrieve the properties of the system.
        -----------
 difference:
 
@@ -1865,7 +1882,7 @@ TreeMap:
 Ds:Red-Black-Tree
 No insertion order
 Sorting-based on keys
-Hetrogeneous objects not allow
+no Hetrogeneous objects used in TreeSet still not sort own(use Comparator). 
 
 
 spl methods:
@@ -1936,6 +1953,17 @@ public static void main(String[] args) {
 
 }
 }
+
+*IdentityHashMap:(add mutable obj)
+     it use of comparator operator to do compare instead of equals. 
+     so,can store mutable obj  
+
+*WeakHashMap:(play on corbage collector)
+  *basically, corbage collector doesn't remove  unused mamory( exlpicity variable use in hashmap it was now to change unused memory) from the hashmap.
+   so wnat to corbage collector over on a map use WeakHashMap.
+
+Corbage collector:
+    *unused Objects will be removed from Memory.
        -----------------
 Poperties class(sub class of Map interface);
  
@@ -2048,8 +2076,10 @@ peek()  -->returns value.
 Queue(FIFO):  subclass -->PriorityQueue.
 add() 
 offer()
-poll()  -->removes elements and return value
-peek()  -->returns next top priority  remove value.
+
+poll()  -->removes elements and return value  . if the element is not exists poll return null.
+remove()  -->if the  element is not exists  it throw an error.
+peek()  -->returns next top priority  remove value or head value. 
 
 Dequeue: subclass -->ArrayQueue,LinkedList (De stands for Double ended)
 add() 
@@ -2087,5 +2117,40 @@ methods:
   3.append();   -->append with exist data.
   4.read();
   
+_____________________________________________________________________________________________________________________________________________________________________________
+Day-35(28.03.2024):
 
+Classes:
+
+1.Concrete class
+2.Singleton class   
+3.Inner class
+4.Abstract class
+5.Base class/Derived class
+6.Pojo class  (plain Old Java Object)
+7.Static class  
+8.Final class
+
+
+2.Singleton class:
+    -->  execute generic single functionality. & code Readability.
+
+ex por:
+
+class Singleton{
+
+private String data;
+
+private File file;
+
+private Singleton(){
+
+}
+
+public 
+
+}
   
+
+
+/

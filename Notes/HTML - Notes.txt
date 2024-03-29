@@ -1,0 +1,573 @@
+HTML (Hyper Text Markup Language):
+
+Markup Language means:
+ is a text-encoding system consisting of a set of symbols inserted in a text document to control its structure,formatting,or the relationship between its parts.
+
+ *HTML is the standard markup language for creating Web pages.
+ *HTML describes the structure of a Web page. 
+ *HTML consists of a series of elements. 
+ *HTML elements tell the browser how to display the content.
+
+
+
+<!DOCTYPE html> - mentioned version.this version in HTML-5 to told browser
+
+proper htlm Document:(Syntax);
+
+<!DOCTYPE html>
+<html>
+   <head>
+
+   </head>
+   
+    <body>
+      //Content
+   </body>
+</html>
+
+ex:
+<body>
+   <h1>Logic First</h1>
+    <p>This is a pragraph</p>
+</body>
+
+ATTRIBUTES:
+a piece of markup language used to adjust the behavior or display of an HTML element.
+________________________________________________________________________________________
+
+//Structural Marcup tag:
+Text tags:
+<h1></h1> ,<h2></h2>, etc.. --> heading tag 
+<b></b>  -->text Bold
+<i></i> --(italic tag) ---Change font 
+<sup></sup> --(super script) --- a<sup>2</sup> -->a power 2
+<sub></sub> --(sub script) -----H<sub>2<sub>0 
+ 
+empty tag;(have not content so have single tag):
+<br/> -->uses of line break --> (<br/> is a empty tags --> have single tag like</> ,athor tag are have opening and closing tags like <></>)
+<hr/> -->display horizontel line 
+
+--------
+//semantic tags:A semantic element clearly describes its meaning to both the browser and the developer
+<strong></strong>
+<em></em> -->(Emphasized text)
+<abbr></abbr> -->abbrivation
+<cite></cite> -->uses of reference (ex: that is references of this book)
+<blockquote></blockquote> --> used to align a set of block contend
+<dfn></drn> ---> uses of definition
+<address></address>  --->uses of contact information
+<del></del> -->Browsers will usually strike a line through deleted text: (it was in before, but not now)
+<ins></ins> -->
+<s></s> --> to convey that is old information ,now that is not valid;
+<mark></mark> --->used to mark the text
+<bdo></bdo>  -->BDO stands for Bi-Directional Override.
+                  The HTML <bdo> tag is used to override the current text direction:
+________________________________________________________________________________________________________________________________
+Lists:  HTML lists allow web developers to group a set of related items in lists.
+
+types:
+    1.Order List
+    2.Unorder List
+    3.Definition List
+
+Order List -> Numeric List 
+ex: 1.vj
+    2.john
+    3.affan
+
+Unorder List 
+ex: *vj
+    *john
+    *affan
+
+
+Unorder List Syntax: 
+<ul>  
+<li>   
+lists...
+</li>
+</ul>
+
+--> ul stands for unorder list
+--> li stands for list items
+
+The CSS list-style-type property is used to define the style of the list item marker. It can have one of the following values:
+
+
+Value  ->	Description
+disc   ->	Sets the list item marker to a bullet (default)
+circle ->	Sets the list item marker to a circle
+square ->	Sets the list item marker to a square
+none   ->	The list items will not be marked
+
+<ul style="list-style-type:disc;">
+----------------------
+Order List Syntax
+
+<ol>
+<li>
+lists...
+</li>
+</ol>
+-------------------
+nested list syntax
+
+<ol>
+ <li>
+  lists...
+   <ul>
+    <li>
+     lists...
+    </li>
+   </ul>
+ </li>
+</ol>
+
+-------------------
+change order list type
+
+ex:
+<ol type="i">  Or type="I" or type="a (or)A")
+    <li>Fruits</li>
+    <li>Strawberry</li>
+    <li>Mango</li>
+    <li>food Item</li>
+
+    <ul>
+        <li>Chicken</li>
+        <li>rise</li>
+        <li>Dosa</li>
+    </ul>
+    </ol>
+
+can change the strat list position:
+ex:
+
+<ol start="5">  
+    <li>Fruits</li>
+    <li>Strawberry</li>
+    <li>Mango</li>
+    <li>food Item</li>
+
+    <ul>
+        <li>Chicken</li>
+        <li>rise</li>
+        <li>Dosa</li>
+    </ul>
+    </ol>
+
+---------------------------------------
+Definition list <dl>:HTML also supports description lists. -->	Defines a description list
+
+A description list is a list of terms, with a description of each term.
+
+<dl>
+  <dt>Coffee</dt>
+  <dd>Black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>White cold drink</dd>
+</dl>
+
+
+The <dl> tag defines a description list. --> Defines a term in a description list
+
+The <dl> tag is used in conjunction with <dt> (defines terms/names) and <dd> (describes each term/name).  -->Describes the term in a description list>
+
+
+
+notes summary
+Use the HTML <ul> element to define an unordered list
+Use the CSS list-style-type property to define the list item marker
+Use the HTML <li> element to define a list item
+Lists can be nested
+List items can contain other HTML elements
+Use the CSS property float:left to display a list horizontally
+____________________________________________________________________________-
+Topic:Links in HTML(HyperLink)
+
+url->Uniform Resource Located
+
+*HTML links are hyperlinks.
+*You can click on a link and jump to another document.
+*When you move the mouse over a link, the mouse arrow will turn into a little hand.
+-----
+
+*The most important attribute of the <a> element is the href (Hyper Text Reference) attribute, which indicates the link's destination.
+*The link text is the part that will be visible to the reader.
+*Clicking on the link text, will send the reader to the specified URL address.
+----
+HTML Links - The target Attribute:
+
+
+*By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.
+
+*The target attribute specifies where to open the linked document.
+
+*The target attribute can have one of the following values:
+
+->  _self - Default. Opens the document in the same window/tab as it was clicked
+->  _blank - Opens the document in a new window or tab
+->  _parent - Opens the document in the parent frame
+->  _top - Opens the document in the full body of the window
+-----
+Absolute URLs vs. Relative URLs
+Both examples above are using an absolute URL (a full web address) in the href attribute.
+
+A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part):
+
+---
+*if you access another to root home file create href="/Home.html" -> / -means Goto Root file (or) href="../Home.html" -> .. Means Go to previous file (parent file)
+../../Home.html -> ../../ means (grand parent file).
+
+*Send a mail -> use -> href="mailto:eneter email here"
+
+*href="Menu.html#Dessert" -->  # to navigate a part of some one file 
+
+________________
+images in html:
+
+<img>
+<img src="img.jpg" alt="descrip image">  ->src -img source path ,alt -alter text suppose img was not load the text is display .
+ex: <img src="images/Dosa.jpg" alt="Special dosa with sambar and chuttney">
+
+attribute ->
+title -> uses of that given text in show when the cursor on img,  like in hover 
+height -> control image hight ex: height="600"  -> mean by 600px;
+width -> control img width  ex:width="300"  ->mean by 300px;
+align -> uses of img align left or right remining page is can be usefull ex:align="left"
+      -> align top and buttom and middle the text first line is change that require
+
+
+<figure></figure> ->used to create caption below the img
+ex:<figure>
+    <img src="images/Dosa.jpg" alt="Special dosa with sambar and chuttney" title="Signature dosa" width="500" height="350">
+    <br>
+    <figcaption>Dosa with Spicy chutney  with masala</figcaption>
+</figure>
+
+_________________________________________________________________________________________
+Tables in html:
+
+Definition and Usage
+-->The <table> tag defines an HTML table.
+
+-->An HTML table consists of one <table> element and one or more <tr>, <th>, and <td> elements.
+
+-->The <tr> element defines a table row, the <th> element defines a table header, and the <td> element defines a table cell.
+
+-->An HTML table may also include <caption>, <colgroup>, <thead>, <tfoot>, and <tbody> elements.
+
+
+
+<table></table>  --> createtable
+<thead><thead>   -->describe table header
+<th></th>   --> describe table header datas
+<tbody></tbody>  --> describe table content 
+<tr></tr>     --->describe table row
+<td></td>     -->describe table datas
+<tfoot></tfoot> --> describe table footer
+
+
+ex program:
+   <table border="2" bgcolor="#Dessert" cellpadding="5" cellspacing="5">    
+        <thead>
+        <tr>
+            <th></th>
+            <th >Items</th>
+            <th>Rupees</th>
+        </tr>
+    </thead>
+    <tbody>
+       <tr>
+        <td rowspan="3" >Starters</td>     -->rowspan uses of common that given data commen of the number of given rows.
+        <td>Samosa</td>
+        <td>Rs.15</td>
+       </tr>
+       <tr>
+        <td>Puffs</td>
+        <td>Rs.18</td>
+       </tr>
+       <tr>
+        <td>Vada</td>
+        <td>Rs.10</td>
+       </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Total</td>        -->colspan means colums span, uses of common that given data commen of the number of given columns.
+        <td></td>
+      </tr>
+    </tfoot>
+    </table>
+________________________________________________________________________________________________________________________________________
+iframe : uses of another page website can open with our page desingn.
+
+ex:<iframe src="https://en.wikipedia.org/wiki/Main_Page/" height="300px" width="400px"></iframe>
+
+Attributes:
+HTML attributes provide additional information about HTML elements.
+HTML Attributes:
+All HTML elements can have attributes
+Attributes provide additional information about elements
+Attributes are always specified in the start tag
+Attributes usually come in name/value pairs like: name="value"
+
+_____________________________________________________________________________________________________________________________________________
+Forms:
+form require for user input.
+
+Definition and Usage:
+The <form> tag is used to create an HTML form for user input.
+
+The <form> element can contain one or more of the following form elements:
+
+<input>
+<textarea>
+<button>
+<select>
+<option>
+<optgroup>
+<fieldset>
+<label>
+<output>
+
+
+action="" usage of move to require page.
+method="get" or "post"  --> usage of get and post, from and to the server.
+
+<input name""> -->name usage of  find specific input values.
+
+expro:
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <form action="Signup.html" method="get" enctype="multipart/form-data">  <!--enctype="multipart/form-data" usage of tell upload multiple file to the server -->
+            <div>
+           <label for="username">User Name:</label> <!-- for usage of  cursor poin to the input when touch the name -->
+           <input type="text" name="username" id="username" placeholder="UserName" value="Vijay" maxlength="5">  <!--Value its provide given dafault value , maxlength its control the number of character  have to give-->
+            </div>
+            <div>
+           <label>Password<input type="password" name="password" placeholder="Password" size="6" required minlength="8"></label> <!--reauired usage of can't to submit when not fill the require element, minlength  usage of its control the minimum length -->
+        </div>
+        <div>
+            <label for="dateofBirth">YearofBirth</label>
+            <input type="date" name="dateofBirth" id="dateofBirth"  min="1990-01-31"  step="10" required> <!--min usage of control the given number is above 1990,step attribute usage of increacing to on 10-->
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="about">About</label><br>
+            <textarea name="about" id="about"  rows="10" cols="30"></textarea>
+        </div>
+        <div>
+            <input type="checkbox" name="smsalert" id="smsalert">
+            <label for="smsalert">SMS alert</label>
+        </div>
+        <div>
+            <input type="checkbox" name="emailalert" id="emailalert">
+            <label for="emailalert">Email alert</label>
+        </div>
+        <div>
+            <label>Genders:</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="others" value="others">
+            <label for="others">Others</label>
+            <!-- On radio buttom value attribute  is must important because button names are same so,which button on click to the server will understand .   -->
+        </div>
+        <div>
+            <select name="state" id="state">
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="AP">Andra PredeshS</option>
+            </select>
+        </div>
+        <div>
+            <input type="color">
+        </div>
+        <input type="hidden" name="hidden" value="hiddenval">
+        <div>
+            <label>Upload Your CV:</label>
+            <input type="file">
+        </div>
+        <!--<button type="submit">Sign Up</button>--> <!--type="submit" anothe usage of after value insert and then click enter button automatically value submitted and no need to click Sing Up buttom -->
+        <input type="image" src="/images/submit.jpg"  width="70"> <!--type=img act  as  submit button-->
+        <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>
+-------------------------------------
+Definition and Usage
+The <fieldset> tag is used to group related elements in a form.
+
+The <fieldset> tag draws a box around the related elements.
+
+ex pro:
+<form action="/action_page.php">
+  <fieldset>
+    <legend>Personalia:</legend>
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+__________________________________________________________________________________________________________________________________________________________
+Grouping and Meta tag:
+
+attributes:
+class  -->usage of grouping elements to use css style.  class hava many names. ex: class="  para para1 clspara"
+
+Block Elements  --> <h>,<div>,<li>,<p>,etc..
+Inline Elements  --><a>,<img>,<span>,etc..
+
+Summary:
+A block-level element always starts on a new line and takes up the full width available
+An inline element does not start on a new line and it only takes up as much width as necessary
+The <div> element is a block-level and is often used as a container for other HTML elements
+The <span> element is an inline container used to mark up a part of a text, or a part of a document
+
+inline-block:
+its most use full for css to display a content.
+The display value of inline-block works similarly to inline with one exception: the height and width of that element become modifiable.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+escapt char --> &copy.&cent,&lt,&gt,&amp,&quot,&pound,&yen,&euro,&reg,&trade,&lsquo,&requo,&lsquo,&rdquo,&times,&divide  --> example <p>&divide</p>
+----
+meta tag:The <meta> tag defines metadata about an HTML document. (Or) to tell the search engines  about your page and the information it contains.
+
+some informations width attributes:
+1.characterset -->To display an HTML page correctly, the browser must know what character set (encoding) to use,
+
+
+2.name and content:
+viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+This gives the browser instructions on how to control the page's dimensions and scaling.
+
+The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+
+3.internet explorel.
+
+
+_______________________________________________________________________________________________________________________________________________________
+CSS: 
+
+-->Stands for Cascading Style sheet.
+
+universal selector -> *
+type selector  --> select a specific type of tag.
+can different type of selctor on sequence.  ex h1,h2{}
+
+------------------------------------------
+text in css:
+1.SERIF text  -->serif fonts extra details on the ends of the main strokes of the lteers.
+2.SANS-SERIF  -->it has a much cleaner desing.
+3.MONOSPACE    -->Every letter in a monospace ,font is the same width.
+4.cursive     -->font is handwriting type,joined type.
+5.FANTASY     -->decorative Fonts.usual of heading.S
+
+
+font-size: 1em;
+   1em means "equal to the current font size", and 2em means 2 times the current font size and doesn't have default font size default font size is 16px.  ex: current font size are 5px,50% 
+
+
+Stander pixel unit:
+
+      px:             %:           em:
+h1   32px  ->  h1   200% -> h1   2em,
+h2   24px  ->  h2   50%  -> h2   1.5em,
+h3   18px  ->  h3   133% -> h3   1.125em
+body 16px  ->  body 100% -> body 1em
+
+some propeties:
+font weigth        style             stretch       
+Light              Normal           Condensed       
+Medium             italic           Regular       
+Bold               Oblique          Expended       
+Black                                                 
+
+
+ text-transform                                         text-decoration
+ uppercase                                                underline 
+  lowercase                                               overline (above line on the content)
+ captilatize                                              line-through (strick through - inilne line in the content)
+        -(words first leter are to make caps).
+
+-----------------------------
+phsudo classes:
+
+
+p:first-letter{  /*shudo class*/
+ font-size: 1.5em;      
+
+}
+/* p::first-line{
+    font-size: 1.5em;
+} */
+
+/* Linke to not visited */
+a:link{
+    color:blue;
+}
+
+/*Linke to visited  */
+a:visited{ /*shudo class*/ 
+    color: brown;
+}
+
+a:hover{
+    color:black;
+}
+
+/* On action */
+a:active{
+    color:blueviolet;
+    text-decoration:line-through;
+}
+
+a:focus{
+color: deeppink ;   /*click on tap mark on active elements*/
+}
+______________________________________________________________________________________________________________________________________________________
+Day 4(CSS):
+
+pseudo selector:
+CSS pseudo-classes are used to add styles to selectors, but only when those selectors meet certain conditions.
+
+-->color search:website color palettes generator
+
+Styling list and Tables:
+
+___________________________________________________________________________________________________________________________________
+position:
+
+position:relative   -->move on relative position (default postion or static postion).
+
+absolute --> absolute out the normal flow.so following element accupy that spacess.  to move on non-static parent element. non-static mean given position. doesn't hava position is known as static element.
+
+fixed  -->  is positioned relative to the viewport
+inherit   -->move based on root element(viewport) size but act as parant position.
+sticky -->  act as nomally, but like as positon:fixed, when that element meet on the condition. 
+
+
+Float:(to achieve multiple columns).
+
+The CSS float property specifies how an element should float and following element it utilized reminder spaces of that element.
+
+The CSS clear property specifies what elements can float beside the cleared element and on which side.
