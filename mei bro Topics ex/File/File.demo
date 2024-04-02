@@ -1,0 +1,121 @@
+package javapractice;
+
+import java.io.File;
+import java.io.IOException;
+
+public class FileHandlingDemo {
+	public static void main(String[] args) {
+		
+		
+//List the Files and Directories:
+//		File file =new File("C:\\java programs\\mei bro Topics ex\\Collections");
+//		String[] listOfFilesFolder=file.list();
+//		for(String s:listOfFilesFolder) {
+//			System.out.println(s);
+//		}
+		  //find it file or folder:
+//		File[] fileFolderList=file.listFiles();
+//	   for(File f:fileFolderList)
+//		   if(f.isFile())           //if(f.isDirectory())  
+//		   System.out.println(f);
+		
+	   
+//	    //Find .txt-files in a File
+//		File []fileFolderList=file.listFiles();
+//		for(File f:fileFolderList) {
+//			if(f.isFile()) {
+//			String fileName=f.getName();
+//			int lastDot=fileName.lastIndexOf(".");
+//			String extension=fileName.substring(lastDot+1);
+//			//System.out.println(extension);
+//			if(extension.equals("class"))
+//			System.out.println(fileName);
+//			}
+//		}
+//			
+		
+		//Find file size:
+		
+//		File []fileFolderList=file.listFiles();
+//		for(File f:fileFolderList) {
+//			if(f.isFile()) {
+//			String fileName=f.getName();
+//			int lastDot=fileName.lastIndexOf(".");
+//			String extension=fileName.substring(lastDot+1);
+//			 if(f.length()>1000)
+//			System.out.println(fileName +"Size: "+ f.length()+" Bytes");
+//			}
+//		}
+//		
+		//delete a file:
+		
+		File file = new File("C:\\java programs\\mei bro Topics ex\\File\\vijay");
+		File []fileFolderList=file.listFiles();
+		for(File f:fileFolderList) {
+			if(f.isFile()) {
+			String fileName=f.getName();
+			int lastDot=fileName.lastIndexOf(".");
+			String extension=fileName.substring(lastDot+1);
+			 if(extension.equals( "txt"))
+			     f.delete();
+//				 System.out.println(f);
+			}
+		}
+		
+		
+		
+//Rename a File:
+//		File file=new File("C:\\java programs\\mei bro Topics ex\\File\\vijay\\text.txt");
+//		try {
+//		System.out.println(file.createNewFile());
+//		}catch(IOException ie) {
+//		  ie.printStackTrace();	
+//		}
+//		File newName =new File("C:\\java programs\\mei bro Topics ex\\File\\vijay\\john.txt");
+//		System.out.println(file.renameTo(newName));
+//		
+//		//printing file Name:
+//		System.out.println(newName.getName());		
+//		
+//		//another options:
+//		//file instruction:
+//		System.out.println(file.canRead());
+//		System.out.println(file.canExecute());
+//		System.out.println(file.canWrite());
+		
+		
+//Delete a file:
+//		File file=new File("C:\\java programs\\mei bro Topics ex\\File\\vijay\\text.txt");
+//		file.delete();
+//		boolean present= file.exists();
+//		System.out.println("Is File delete: "+present);
+		
+		
+//file creation:
+//		File file=new File("C:\\java programs\\mei bro Topics ex\\File\\vijay\\text.txt");
+//	   boolean present=file.exists();	
+//		if(present==false) {
+//			try {
+//				boolean created = file.createNewFile();
+////				present=true;
+//				System.out.println("file present: "+created);
+//			}catch(IOException ie) {
+//				ie.getMessage();
+//			}
+//			}
+		
+//folder creation:
+////File file=new File("C:\\java programs\\mei bro Topics ex\\File\\vijay");
+//		File file=new File("C:\\java programs\\mei bro Topics ex\\File\\vijay\\Raja\\Raani");
+//boolean present=file.exists();
+//System.out.println("folder present :"+present);
+//if(present== false) {
+////	file.mkdir();
+//	file.mkdirs();
+//	 present=file.exists();
+//	 System.out.println("folder present :"+present);
+//	
+//}
+}
+
+}
