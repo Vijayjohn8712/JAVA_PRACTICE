@@ -1,0 +1,55 @@
+Interview Questions:
+1.How long will you be with us?
+Until the manage ment ,untill the company provides me good environment to grow.
+______________________________________________________________________________________
+2.Diffrence between array and arrayList?
+
+   Array                            ArrayList
+1.Fixed length                      Dynamic size
+
+2.Performance good   based on       Not Good  Based on
+  Hardware resource                 Hardware resource  
+     
+3.Can Hold both Primitive           Only non-Primitive elements  
+   & Non-Prmitive
+
+4.No Build in methods for parsing    Dynamic Array.
+______________________________________________________________________________________
+3.Wrapper class:
+usage of converting primitive to non-primitive(Objects).
+
+ex Pro:
+int i=10; //Primitive data type.
+float f;
+
+Integer i2=Integer.valueOf(i);  //Integer.valueOf() usage of converting primitive value to Object --> this statements store(c a primitive value to object of i2.  -->its called, Boxing or wrapping. 
+
+int j=i2.intValue(); // intValue() usage of get a value of the current object ,its called unboxing.
+
+Integer i3=20;    //This statement primitive data type converting object type aumatically by the compiler,so its called autoboxing.
+
+int k=i2  //this statement is work with i2 value is converting int and stored to k in automatically by compiler (compiler convert to like int k=i2.intValue())
+;,so its called autounboxing.
+_________________________________________________________________________________________________________________________
+6.Primitive datatype and non-primitive datatype:
+ *Primitive Data Type:  
+    A Primitive data type is pre-defined by the programming language. The size and type of variable values are specified, and it has no additional methods.
+ *Non-Primitive Data Type:
+    These data types are not actually defined by the programming language but created by the programmer. They are also called "reference variables" or "Object reference" Since they reference a memory location which stores the data.it has additional methods and Dynamic size.
+___________________________________________________________________________________________________________________________________________________________________
+5.what is JVM?
+Stands for Java virtual Mechine, JVM is a interpretor. That enables a computer to run a java programs . (interpreter work with read code line by line and execute each line immidiatly._
+*API's --> its handled security of a program.  how .class file may have hack code so, that JVM API's prevents that .class file not acceess reminder resource of a mechine.so called java is secuired Language.
+* JRE holds --> JVM holds --> API's + JIT compiler(Just in Time).
+
+Java its Simple?
+yes,because java syntax similar than as c++.
+
+Java is Portable:(WORA).
+java is secure ,so java is portable.
+same as platform indipendent and portable.
+
+___________________________________________________________________________________________________________________________________
+
+6.literals:
+Literals in Java are a synthetic representation of boolean, character, numeric, or string data. They are a means of expressing particular values within a program.

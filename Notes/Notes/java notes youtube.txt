@@ -1,0 +1,41 @@
+java notes youtube:
+
+Getting user input:
+
+In Java, System.in is the standard, universally accessible InputStream that developers use to read input from the terminal window. However, Java's System.in does not work alone. To read user input with System.in, you must pass it as an argument to either: The constructor of the Scanner class.
+
+Scanner class is used to scan(Read) the user input.
+
+Syntax:
+Scanner Obj_Neame=new Scanner(System,in);
+--------------------------------------------------------------------------
+System.in:
+System.in is an InputStream object in Java that represents the standard input stream, which is typically connected to the keyboard.
+It is used to read raw byte data from the standard input. To convert this raw byte data into more useful forms like characters or higher-level data types, you need to use classes like Scanner or BufferedReader.
+
+Next():
+next() is a method provided by the Scanner class in Java, which is used for input processing.
+It is typically used to read the next complete token (word) from the input stream. For example, if you have a Scanner object scanner associated with the standard input (System.in), you can use scanner.next() to read the next word entered by the user.
+------------------------------------------------------------------------------------------------------------------------
+
+Next() vs NextLine();
+
+Next(): It read input from the input device till the space character. 	
+NextLine():It read input from the input device till the line change. 
+ 
+Next():It cannot read those words having space in it. 
+NextLine(): It can read those words having space in it. 
+ 
+Next():It ends reading the input after getting space. 
+NextLine():It ends reading the input after getting ‘\n’ or press enter. 
+ 
+Next():It places the cursor in the same line after reading the input. 
+NextLine():It places the cursor in the next line after reading the input. 
+ 
+Next():The escaping sequence of next() is space. 
+ NextLine():The escaping sequence of nextLine() is ‘\n’. 
+ 
+Syntax to scan input: 
+Scanner.next() 
+ Syntax to scan input: 
+Scanner.nextLine() 
