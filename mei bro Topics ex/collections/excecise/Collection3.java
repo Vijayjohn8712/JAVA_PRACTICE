@@ -18,6 +18,7 @@ class Collection3{
      qu.offer("d");
      qu.offer("b");
      qu.offer("c");
+     qu.offer("c");
      System.out.println(qu); 
      System.out.println(qu.peek());   
      System.out.println(qu.poll());
@@ -28,6 +29,7 @@ class Collection3{
     ar.offer("d");
     ar.offer("B");
     ar.offer("C");
+    ar.offer("D");
     ar.offer("D");
     ar.offerFirst("E");
     ar.offerLast("F");
