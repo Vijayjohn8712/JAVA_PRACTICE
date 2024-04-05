@@ -1,0 +1,51 @@
+/* Universal Selector */
+*{
+    color:coral
+}
+
+/* type selector */
+h1{
+    color:orangered !important   /* override  all*/
+}
+
+h6{
+    color:aqua
+}
+
+h1,h5{
+    color:gold;
+}
+
+h3{
+    color:blue;
+}
+
+/* id selector */
+#id{
+    color: rgb(255, 0, 0);
+}
+
+/* class selector */
+.h7{
+    color: blueviolet;
+}
+
+/* Child selector */
+div>p{
+    color:cadetblue
+}
+
+/* descendents selector--> Child of Child in parent of div */
+div a{
+    color:springgreen
+}
+
+/* sibling slector */
+h1~h5{
+    color:black
+}
+
+/* adjacent sibling selector */
+h2+h3{
+    color:aqua
+}

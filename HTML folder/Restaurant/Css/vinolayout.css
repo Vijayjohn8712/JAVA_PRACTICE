@@ -1,0 +1,184 @@
+.container{
+    height: 700px;
+width: 100%;
+background-color: aquamarine;
+
+}
+
+.cldcontainer1{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    border: 1px solid black;
+box-sizing: border-box;
+}
+.parent1{
+background-color: aqua;
+width: 50%;
+height: 100%;
+display: flex;
+flex-wrap: wrap;
+border: 1px solid black;
+box-sizing: border-box;
+}
+
+.parent2{
+    background-color:blue;
+   width: 50%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+
+.cldcontainer2{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.parent3{
+    background-color:aquamarine;
+    width: 50%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    }
+    
+    .parent4{
+        background-color:blueviolet;
+       width: 50%;
+        height: 100%;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    .parent1 .child1 {
+          width: 50%;
+          height: 20%;
+          background-color: brown;
+          border: 1px solid black;
+          box-sizing: border-box;
+    }
+
+    .parent1 .child2 {
+        width: 50%;
+        height: 20%;
+        background-color:blanchedalmond;
+        border: 1px solid black;
+        box-sizing: border-box;
+  }
+
+  .parent1 .child3 {
+    width: 70%;
+    height: 20%;
+    background-color:bisque;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.parent1 .child4 {
+    width: 30%;
+    height: 20%;
+    background-color:brown;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.parent1 .child5 {
+    width: 60%;
+    height: 20%;
+    background-color:brown;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.parent1 .child6 {
+    width: 40%;
+    height: 20%;
+    background-color:bisque;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.parent1 .child7 {
+    width: 65%;
+    height: 20%;
+    background-color: bisque;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.parent1 .child8 {
+    width: 35%;
+    height: 20%;
+    background-color: brown;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.parent1 .child9 {
+    width: 40%;
+    height: 20%;
+    background-color: brown;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.parent1 .child10 {
+    width: 60%;
+    height: 20%;
+    background-color: bisque;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.parent1 .child11 {
+    width: 70%;
+    height: 20%;
+    background-color: bisque;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.parent1 .child12 {
+    width: 30%;
+    height: 20%;
+    background-color: brown;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.parent2 .child1{
+    width: 100%;
+    height: 60%;
+    background-color:cadetblue ;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.parent2 .child2{
+    width: 100%;
+    height: 15%;
+    background-color:burlywood ;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.parent2 .child3{
+    width: 100%;
+    height: 15%;
+    background-color:cadetblue ;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.parent2 .child4{
+    width: 100%;
+    height: 10%;
+    background-color:burlywood;
+    border: 1px solid black;
+    box-sizing: border-box;
+}

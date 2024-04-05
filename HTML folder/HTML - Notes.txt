@@ -1,0 +1,179 @@
+HTML (Hyper Text Markup Language):
+
+ *HTML is the standard markup language for creating Web pages.
+ *HTML describes the structure of a Web page. 
+ *HTML consists of a series of elements. 
+ *HTML elements tell the browser how to display the content.
+
+<!DOCTYPE html> - mentioned version.this version in HTML-5 to told browser
+
+proper htlm Document:(Syntax);
+
+<!DOCTYPE html>
+<html>
+   <head>
+
+   </head>
+   
+    <body>
+      //Content
+   </body>
+</html>
+
+ex:
+<body>
+   <h1>Logic First</h1>
+    <p>This is a pragraph</p>
+</body>
+
+ATTRIBUTES:
+a piece of markup language used to adjust the behavior or display of an HTML element.
+________________________________________________________________________________________
+
+//Structural Marcup tag:
+Text tags:
+<h1></h1> ,<h2></h2>, etc.. --> heading tag 
+<b></b>  -->text Bold
+<i></i> --(italic tag) ---Change font 
+<sup></sup> --(super script) --- a<sup>2</sup> -->a power 2
+<sub></sub> --(sub script) -----H<sub>2<sub>0 
+ 
+empty tag;(have not content so have single tag):
+<br/> -->uses of line break --> (<br/> is a empty tags --> have single tag like</> ,athor tag are have opening and closing tags like <></>)
+<hr/> -->display horizontel line 
+
+--------
+//semantic tags:A semantic element clearly describes its meaning to both the browser and the developer
+<strong></strong>
+<em></em> -->(Emphasized text)
+<abbr></abbr> -->abbrivation
+<cite></cite> -->uses of reference (ex: that is references of this book)
+<blockquote></blockquote> --> used to align a set of block contend
+<dfn></drn> ---> uses of definition
+<address></address>  --->uses of contact information
+<del></del> -->Browsers will usually strike a line through deleted text: (it was in before, but not now)
+<ins></ins> -->
+<s></s> --> to convey that is old information ,now that is not valid;
+<mark></mark> --->used to mark the text
+<bdo></bdo>  -->BDO stands for Bi-Directional Override.
+                  The HTML <bdo> tag is used to override the current text direction:
+________________________________________________________________________________________________________________________________
+Lists:  HTML lists allow web developers to group a set of related items in lists.
+
+types:
+    1.Order List
+    2.Unorder List
+    3.Definition List
+
+Order List -> Numeric List 
+ex: 1.vj
+    2.john
+    3.affan
+
+Unorder List 
+ex: *vj
+    *john
+    *affan
+
+
+Unorder List Syntax: 
+<ul>  
+<li>   
+lists...
+</li>
+</ul>
+
+--> ul stands for unorder list
+--> li stands for list items
+
+The CSS list-style-type property is used to define the style of the list item marker. It can have one of the following values:
+
+
+Value  ->	Description
+disc   ->	Sets the list item marker to a bullet (default)
+circle ->	Sets the list item marker to a circle
+square ->	Sets the list item marker to a square
+none   ->	The list items will not be marked
+
+<ul style="list-style-type:disc;">
+----------------------
+Order List Syntax
+
+<ol>
+<li>
+lists...
+</li>
+</ol>
+-------------------
+nested list syntax
+
+<ol>
+ <li>
+  lists...
+   <ul>
+    <li>
+     lists...
+    </li>
+   </ul>
+ </li>
+</ol>
+
+-------------------
+change order list type
+
+ex:
+<ol type="i">  Or type="I" or type="a (or)A")
+    <li>Fruits</li>
+    <li>Strawberry</li>
+    <li>Mango</li>
+    <li>food Item</li>
+
+    <ul>
+        <li>Chicken</li>
+        <li>rise</li>
+        <li>Dosa</li>
+    </ul>
+    </ol>
+
+can change the strat list position:
+ex:
+
+<ol start="5">  
+    <li>Fruits</li>
+    <li>Strawberry</li>
+    <li>Mango</li>
+    <li>food Item</li>
+
+    <ul>
+        <li>Chicken</li>
+        <li>rise</li>
+        <li>Dosa</li>
+    </ul>
+    </ol>
+
+---------------------------------------
+Definition list <dl>:HTML also supports description lists. -->	Defines a description list
+
+A description list is a list of terms, with a description of each term.
+
+<dl>
+  <dt>Coffee</dt>
+  <dd>Black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>White cold drink</dd>
+</dl>
+
+
+The <dl> tag defines a description list. --> Defines a term in a description list
+
+The <dl> tag is used in conjunction with <dt> (defines terms/names) and <dd> (describes each term/name).  -->Describes the term in a description list>
+
+
+
+notes summary
+Use the HTML <ul> element to define an unordered list
+Use the CSS list-style-type property to define the list item marker
+Use the HTML <li> element to define a list item
+Lists can be nested
+List items can contain other HTML elements
+Use the CSS property float:left to display a list horizontally

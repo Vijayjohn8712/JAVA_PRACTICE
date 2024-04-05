@@ -1,0 +1,70 @@
+body{
+    background-color: bisque;
+}
+
+.container{
+    display: grid;
+    /* colums: */
+   /* grid-template-columns: 1fr 2fr 1fr; */  /*fr separate to based on ration */
+   /* grid-template-columns: repeat(3,1fr); */
+   /* grid-template-columns: 200px 300px auto; */
+    /* grid-template-columns: 300px  2fr 1fr; */
+    /* grid-template-columns: minmax(200px,1fr) 1fr 1fr ; */
+    /* grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); */
+     /* grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); */
+    /* column-gap: 20px;
+
+    /* rows: */
+    grid-template-rows:1fr 1fr 1fr ;
+
+    row-gap: 20px; */
+    gap: 20px;
+}
+
+.para{
+    padding: 1rem;
+    background-color:cadetblue;
+    color: white;
+}
+
+.box{
+    background-color: greenyellow;
+    color: white;
+    font-size: 4rem;
+    display: grid;
+   justify-content: center; 
+   align-items: center;
+}
+
+.outerbox{
+    display: grid;
+    margin: 20px;
+    grid-template-columns: repeat(4,1fr);
+    /* grid-template-columns: repeat(4,100px); */
+    gap: 10px;
+    grid-template-rows:100px 100px ;
+    /* grid-auto-flow: column;  default row */
+    grid-auto-rows: 200px;  /*usefull for manage  extra elements size above we give size to two rows so above 2  rows are extra rows*/
+  align-items: center;
+  /* justify-content: end;   to modify full content  strecth*/
+  /* justify-items: center;  to modify specific item ,and by default strecth */
+
+}
+/* 
+.box1{
+    /* grid-column-start:1 ;
+    grid-column-end:3 ; */
+
+    /* grid-column:1/4 ; */
+    /* grid-column:1/-1 ; */
+/* 
+    grid-column: span 3;
+}
+
+.box2{
+    grid-row: span 3;
+} */ 
+
+.box1{
+    justify-self: start;
+}

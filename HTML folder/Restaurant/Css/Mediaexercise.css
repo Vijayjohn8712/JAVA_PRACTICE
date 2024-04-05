@@ -1,0 +1,112 @@
+.container{
+width: 100%;
+height: 700px;
+/* background-color: aqua; */
+/* padding: ; */
+}
+.box1{
+    width: 100%;
+    height: 20%;
+    background-color: blueviolet;
+}
+
+.box2{
+height: calc(100% - 64%);
+width: 90%;
+/* background-color:rgb(34, 92, 121) ; */
+margin: auto;
+padding: 2%;
+}
+
+.ch1,.ch2,.ch3,.ch4{
+    height: calc(100% - 200px ) ;
+    width: calc(100% -4%);
+    margin:  4px;
+    background-color:rgb(10, 212, 247) ;
+    /* position: relative;
+    left: 5%; */
+}
+
+
+.box3{
+    width: 90%;
+    height: 15%;
+    background-color: rgb(6, 69, 94);
+  
+    /* position: relative; */
+    /* left: 5%; */
+    margin: auto;
+    margin-top: 40px;
+  } 
+
+.box4{
+    width: 100%;
+    height: 15%;
+    margin-top: 35px;
+    background-color: rgb(13, 13, 152);
+
+}
+@media (min-width:600px){
+  .box1{
+    height: 15%;
+  }
+    .box2{
+      width: 30%;
+      height:40% ;
+      float: left;
+    }  
+    .ch1,.ch2,.ch3,.ch4{
+      height: calc(100% - 215px ) ;
+    }
+  .box3{
+      height: 15%;
+      width: 90%;
+      float: left;
+   margin-top: 80px;
+   position: relative;
+   left: 30px;
+
+  } 
+  
+   .box4{
+    
+      float: left;
+      position: relative;
+      margin-top: 10px;
+      /* bottom: 30px; */
+  
+  } 
+
+}
+
+@media (min-width:801px){
+.box1{
+  height: 15%;
+}
+  .box2{
+    width: 30%;
+    height:40% ;
+    float: left;
+  }  
+  .ch1,.ch2,.ch3,.ch4{
+    height: calc(100% - 215px ) ;
+  }
+.box3{
+    height: 65%;
+    width: 15%;
+    float: right;
+  position: relative;
+  bottom:30px ;
+  right: 20px;
+} 
+
+ .box4{
+  
+    float: left;
+    position: relative;
+    margin-top: 10px;
+    /* bottom: 30px; */
+
+} 
+  
+ }  

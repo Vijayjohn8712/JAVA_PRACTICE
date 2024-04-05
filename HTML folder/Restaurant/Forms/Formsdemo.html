@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <form action="Signup.html" method="get" enctype="multipart/form-data">  <!--enctype="multipart/form-data" usage of tell upload multiple file to the server -->
+            <div>
+           <label for="username">User Name:</label> <!-- for usage of  cursor poin to the input when touch the name -->
+           <input type="text" name="username" id="username" placeholder="UserName" value="Vijay" maxlength="5">  <!--Value its provide given dafault value , maxlength its control the number of character  have to give-->
+            </div>
+            <div>
+           <label>Password<input type="password" name="password" placeholder="Password" size="6" required minlength="8"></label> <!--reauired usage of can't to submit when not fill the require element, minlength  usage of its control the minimum length -->
+        </div>
+        <div>
+            <label for="dateofBirth">YearofBirth</label>
+            <input type="date" name="dateofBirth" id="dateofBirth"  min="1990-01-31"  step="10" required> <!--min usage of control the given number is above 1990,step attribute usage of increacing to on 10-->
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="about">About</label><br>
+            <textarea name="about" id="about"  rows="10" cols="30"></textarea>
+        </div>
+        <div>
+            <input type="checkbox" name="smsalert" id="smsalert">
+            <label for="smsalert">SMS alert</label>
+        </div>
+        <div>
+            <input type="checkbox" name="emailalert" id="emailalert">
+            <label for="emailalert">Email alert</label>
+        </div>
+        <div>
+            <label>Genders:</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="others" value="others">
+            <label for="others">Others</label>
+            <!-- On radio buttom value attribute  is must important because button names are same so,which button on click to the server will understand .   -->
+        </div>
+        <div>
+            <select name="state" id="state">
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="AP">Andra PredeshS</option>
+            </select>
+        </div>
+        <div>
+            <input type="color">
+        </div>
+        <input type="hidden" name="hidden" value="hiddenval">
+        <div>
+            <label>Upload Your CV:</label>
+            <input type="file">
+        </div>
+        <!--<button type="submit">Sign Up</button>--> <!--type="submit" anothe usage of after value insert and then click enter button automatically value submitted and no need to click Sing Up buttom -->
+        <input type="image" src="/images/submit.jpg"  width="70"> <!--type=img act  as  submit button-->
+        <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>

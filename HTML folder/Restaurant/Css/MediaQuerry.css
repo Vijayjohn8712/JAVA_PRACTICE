@@ -1,0 +1,33 @@
+.para1{
+    background-color: orange;
+}
+.para2{
+    background-color: blue;
+}
+
+.para3{
+    background-color: yellow;
+}
+
+/* whenever give media querry at last */
+@media(min-width:801px){
+    .container p{
+        /* text-align: justify; */
+        width: 30%;
+    float:left;
+    padding: 10px;
+    margin: 2px;
+    }
+}
+/* 
+.container p{
+    width: 100%;
+} 
+*/
+
+
+@media print{
+    body{
+        background-color: none;
+    }
+}

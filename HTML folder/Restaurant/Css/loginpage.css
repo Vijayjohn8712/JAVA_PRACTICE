@@ -1,0 +1,61 @@
+body{
+  
+     background: url("/images/Backgroundimg.jpg"); /*pixel size 1920 x 1080 */
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+    }
+
+.regform{
+    width:500px;
+    background-color:rgba(99, 81, 81, .5);
+    margin: 100px auto;
+    color: white;
+    padding: 10px 20px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.regform h1{   /*color search:website color palettes generator*/
+    text-align: center;
+    color: red;
+}
+.textlable{
+    display: block;
+}
+
+.input input{
+   width: 100%;
+   font-size: 1.5em; 
+   border: 1px solid red;
+   box-shadow:  2px 2px 2px red;
+   border-radius: .7rem;
+   padding: 5px 20px;    
+   box-sizing: border-box;
+   margin: 5px 0 15px;
+}
+
+input:focus{
+    background-color:rgba(76, 29, 29, 0.493) ;
+    /* color: ; */
+}
+
+.btn{
+    text-align: center;
+}
+
+button{
+    background-color: rgb(0, 0, 255);
+    color: whitesmoke;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px 15px;
+    border-radius: .4rem;
+    border: 1px solid black;
+    box-shadow: 2px;
+}
+
+.radio input{
+  accent-color: blue;
+  transform: scale(1.3);
+  
+}

@@ -1,0 +1,70 @@
+.outerbox{
+    background-color: beige;
+    min-height: 400px;
+   
+    display: flex;
+    /* flex-wrap: wrap;  manage to wrap based on space between */
+    /* flex-direction: column; */
+    /* justify-content: flex-end;  Main axis */
+    justify-content: center;
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    align-items: center;/*  cross axis*/
+    /* align-items: stretch; */
+}
+
+.box{
+ 
+    border: 2px solid white;
+    width: 180px;
+    height: 180px;
+    background-color: blue;
+}
+
+.box1{
+    /* align-self: flex-start; */  
+    /* flex-shrink: 0;  strink maitaing element  default width */
+       /* flex-shrink: 1; */
+       flex: 1 2 0;
+}
+.box2{
+    /* flex-grow: 2;  use of how to hold extra spaces */
+    /* flex-basis: 0; */
+    flex-shrink: 2;     /*opposite of felx-grow*/
+}
+
+.box3{
+    /* flex-grow: 1; */
+    /* flex-basis: 0;   */
+}
+
+.box4{
+    /* flex:1; */
+}
+
+.container{
+  display: flex;
+  /* flex-direction: column; */
+}
+
+p{
+ padding:10px;
+}
+
+.para1{
+    background-color: aqua;
+    flex: 1;
+    order:1;
+}
+
+.para2{
+    background-color: darkgoldenrod;
+    flex: 1;
+    order: 3;
+}
+
+.para3{
+    background-color: cornsilk;
+    flex: 2;
+    order: 2;
+}

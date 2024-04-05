@@ -1,0 +1,59 @@
+*{
+    background: #000;
+    color: white;
+}
+
+h1{
+    border: 1px solid white;
+    width:50%;
+}
+p{
+    /* border: 1px solid white; */
+    border-width: 10px;
+    /* border-bottom:4px; */
+    /* border-width: 5px 3px 2px 1px; */
+    /* border-style:solid; */
+    border-style:solid dashed;
+    /* border-color: green  ; */
+    border-color:green blue;
+    width:400px;
+    /* height:400px; */
+    max-height: 200px;
+    overflow:auto;
+    background-color:burlywood;
+    color:blue;
+    padding: 10px ;
+    margin: 10px;
+    text-indent:10px;
+    margin: 10px auto 10px auto;
+    border-radius: 10px;
+    /* box-shadow:  10px 10px 10px gainsboro; */
+                /* inset 10px 10px 10px gainsboro; */
+    /* box-shadow: inset 10px 10px 10px gainsboro; */
+
+    border: 20px solid;
+    /* border-image: url("/images/samosa.jpg") 30 stretch; */
+    border-image: url("/images/samosa.jpg") 30 round;
+    
+}
+.paradiv{
+ 
+    max-width: 1500px;
+    min-width: 600px;
+    border: 1px solid white;
+}
+p::first-letter{
+    font-size: 2em;
+    color:red;
+}
+a{
+    border: 1px solid white;
+}
+li{
+    display: inline-block;
+}
+
+.comming-soon{
+    /* display: none; */
+    visibility: hidden;
+}

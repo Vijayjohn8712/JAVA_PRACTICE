@@ -1,0 +1,67 @@
+ .bluebox{
+    background-color: steelblue;
+    width: 200px;
+    height: 200px;
+    margin-top: 50px;
+    position: sticky;
+    top: 10px;
+    bottom: 0px;
+}
+
+.yellowbox{
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    /* z-index: 1;  */
+    position: absolute;
+
+    position: fixed;
+    position: inherit;
+    position: sticky;
+    left: 46px;
+    top: 10px;
+    top: 152px;
+ } 
+
+ h1{
+    border: 1px solid black;
+    position:relative;
+    /* z-index: -1; */   /*manage that element how to show of before or behind*/
+    left: 100px;
+    width: fit-content;
+    /* background-color: red; */
+} 
+
+
+/* float */
+
+
+.bluebox{
+    background-color: steelblue;
+    width: 200px;
+    height: 200px;
+    float:left;
+    margin-right: 10px;
+}
+
+.yellowbox{
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+}
+
+/* @media (min-width:801px){
+    .para1 p{
+        width:30%;
+        float: left;
+    }
+    .logicfirstpara p{
+        width:30%;
+        float: left;
+    }
+
+    .bluebox{
+        clear: left;
+    }
+} */
