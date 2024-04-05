@@ -559,7 +559,7 @@ position:
 
 position:relative   -->move on relative position (default postion or static postion).
 
-absolute --> absolute out the normal flow.so following element accupy that spacess.  to move on non-static parent element. non-static mean given position. doesn't hava position is known as static element.
+absolute --> absolute out the normal flow.so following element accupy that spacess.  to move on non-static parent element. non-static mean given position. element doesn't havae position is known as static element.
 
 fixed  -->  is positioned relative to the viewport
 inherit   -->move based on root element(viewport) size but act as parant position.
@@ -567,6 +567,9 @@ sticky -->  act as nomally, but like as positon:fixed, when that element meet on
 
 
 Float:(to achieve multiple columns).
+
+alt+shift+F --> to formate
+_______________________________________________________
 
 The CSS float property specifies how an element should float and following element it utilized reminder spaces of that element.
 
@@ -609,3 +612,48 @@ vh -->viewport height --> calculate percentage of the view port height
 vmin  -->  with and height  what has minimum size  of the viewport which take to calculate.
 vmax  -->  with and height  what has maximum size  of the viewport which take to calculate
 
+____________________________________________________________________________________________________________________________________________
+flex: to achieve responsive design.
+
+diffrence between flex and float:
+1. flex give perfect alinment automatically,but float do not.
+
+properties:
+
+flex1,flex2,flex2 --> it is ratio. its helps to acheive require layout with.
+order  -->it is help full change to order the element position we desire.
+flex-directaion -->default row.  flex-direction:column --> it distribute colum wise of the element.
+
+
+
+*it has to axis ,
+               1.one main axis(justify-content) -->it flext direction,  
+                           values : start,ent,center,space-around ,space-betweem.
+               2.another one cross axis(align-items) -->it opposite direction of main axis
+                          properties: ,start,end,center,stretch --> to strtch parent entier height. 
+
+--> flex-flow -->it shorthand of flex-direction and flex-wrap. ex: flex-flow:row wrap.
+
+
+--> align-content Property
+The align-content property is used to align the flex lines.
+
+________________________________________________________________________________________________________________________________________________________
+Grid:
+ flext and grid diff:
+1.flex is one dimensional ,display either row by row or column by coumn.
+2.grid is two dimensional,
+
+
+properties:
+repeat(repleted columns,size)  -->usage of  how many colums display and second one is maintaine size.
+minmax()  --> usage of maintain to display mimum and maxmum width based on viewport width in specific element.
+auto-fit --> usage of maintain display width automatically based on viewport .
+auto-fill -->maintane give size.
+ grid-auto-flow:  --> its uses of controll the flow how row wise or colum wise.
+grid-auto-rows:  --> use of maitain extra elements size in give size.
+
+grid-template-areas--> instead of grid-column ,and grid-row.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+practice frondend mentor.

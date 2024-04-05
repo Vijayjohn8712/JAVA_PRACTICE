@@ -2162,7 +2162,7 @@ Day-35(28.03.2024):
 
 Classes:
 
-1.Concrete class
+1.Concrete class   -->normal class creation.
 2.Singleton class   
 3.Inner class
 4.Abstract class
@@ -2173,7 +2173,10 @@ Classes:
 
 
 2.Singleton class:
-    -->  execute generic single functionality. & code Readability.
+     -->it is restricts to allow only one obj creation.that the obj reference return to another class to use, from static method in the Singleton cls. 
+    -->its constructors has private,members are static.
+    so, advantage save mamory space, 
+   
 
 ex por:
 
@@ -2274,3 +2277,6 @@ public class AssClass {
 	 System.out.println("you entered"+no);
  }
 }
+________________________________________________________________________________________________________________________________________________
+Threads:
+Can perform more than one process at a time..
