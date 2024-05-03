@@ -1533,7 +1533,7 @@ Methods:
 5.int lastIndexOf(Object o)  --> get Last index values of particular dublicate Object(element). ex: int indexOf("vj");
 6.Object remove(int i)  -->  remove the first occurence of the specified element form this list.if it si present.
 7.Object set(int i,Object o)  ---> Replace a partiuclare index object(element) to given Object.
-8.List subList(int start,int end)-->[start to end -1] -->return a partiuclar list in a colletion of lists.
+8.List subList(int start,int end) -->[start to end -1] -->return a partiuclar list in a colletion of lists.
 9.clear()
 10.removeAll(collcetion c) --->remove a specified collection List.
 11.retainAll(collcetion c) --->contain only specified collection list, and remove to all reminder.opposide of removeAll().
@@ -2038,7 +2038,7 @@ class ComparatorDemo{
         for(String s:name){
         System.out.println(s);
         }  
-      Comparator comp=new  ExtendsComparatorClass(); //Comparator<String>
+      Comparator comp=new  ImplementsComparatorClass(); //Comparator<String>
       Arrays.sort(name,comp);
       System.out.println("After Compare:");
          for(String st:name){
@@ -2049,7 +2049,7 @@ class ComparatorDemo{
 }
 
 //Comparator usage of sort the element in ascending or descending oder.
-class ExtendsComparatorClass implements Comparator{  // typecasting can have Comparator<String>
+class ImplemnetsComparatorClass implements Comparator{  // typecasting can have Comparator<String>
 
     public int compare(Object o1,Object o2){  //      public int compare(String o1,String o2){
         String s1=(String)o1; //typecaste
@@ -2278,5 +2278,112 @@ public class AssClass {
  }
 }
 ________________________________________________________________________________________________________________________________________________
+Threads Under Concurrency.
+but java only focus on Threads.
+
 Threads:
-Can perform more than one process at a time..
+Can perform more than one task at a time in a single program.
+*light weighted.(cotz it prerfom inside a single process)
+*multi threaded  language is one of the feature of java language.
+
+package --> java.util.concurrent 
+
+
+Process and threads:
+1.Multiprocessing  -->ex: OS 
+2.Multithreading
+
+
+JVM is  one of the part of multiple tasking.
+
+how run at a time:
+jvm execute based on stack ,so i create thread object and invoke start method now create another stack for thread ,so both execute at a same time. 
+
+Thread Object:
+methods:
+public void run()
+public void start()
+
+start() --> start the new thread.
+
+IllegalThreadStateException --> if we start the Thread more than onece. 
+
+obj creation happend in run time.
+
+ThreadStates:
+Thread Life cycle:
+1.New State
+2.Runnable State
+3.Running State
+4.Waiting/Sleep - state.
+5.Terminated State.
+
+Whenever I creating the Thread Obj, Thread will be New State,When i giving Thread obj . Start() it will be move to Runnable State.After that onece Run is executed Thread Will be Running State, after executing run, Thread will be dead state.or 
+Threadobj.getState()  --> it gives current Thread state.
+
+JVM has a Thread Scheduler -->it  a software and it Decides which Thread to be moved from Runnable to Runnig ,if i create  many Threads.and Can set priority to threads. 
+
+Threadobj.setPriority(int i)  -->given priority number  between 1 to 10 only.  
+1 is high priority.
+5 is default priority.
+
+illigalArgumentException --> if we give priority above 10 or negative num.
+
+
+get Thread Name--> getName();
+set thread Name --> setName("Name");
+id -->getId();
+find priority of the requre thread ---> threadobj.getPriority();
+
+Interview Questions:
+1.What is Multithreading?
+2.What is Thread Life Cycle?
+3.What is Thread Priority?
+4.How to change Thread priority?
+5.Thread related Exceptions.
+6.What will happen if i start a thread twice?
+
+3.Priority:
+priority are represented by a number between 1 and 10.
+
+4.setPriority method it used to chage the priority.
+
+5.IllegalThreadStateException --> if we start the Thread more than onece. 
+  illigalArgumentException --> if we give priority above 10 or negative num.
+
+6.IllegalThreadStateException will be thrown.
+
+
+extra methods:
+1.yeild()  -->means giving somethings.(currently executing thread giving its chances to other threads.other threads which havesame priority as of yeilding thread.
+
+2.sleep()  -->sleep(1000) means that thread goes to sleep to 1000ms in waiting state from Running State.--> its trow InterruptedException.
+
+3.join()   -->uses of one thread wait for the completion of another thread,that one thread goes to wait state.(exmple whateever is download,that download is waiting for internet connectivity).
+               *it have two option:
+
+4.interrupt() --> interrupt wich, what thread is in sleep state.(ex: this method wake up the sleep thread in corresponding state(sleep).(ex: internet connection suddenly  stopped then it automatically to connected.
+
+*syncronized Key -->give in method signature.(ITC --> inter Thread Communication). --> to sync multiple Threads
+______________________________________________________________________________________________________________________________________________________________________________
+advanced java:
+
+ Core Java (J2SE) ,Advanced Java (JEE).
+
+
+ step-1: register driver
+        Class.forName("com.mysql.cj.jdbc.Driver");
+
+step-2: create connection
+        Connection conn = DriverManager.getConnection(CONNECTION_STRING, MYSQL_USERNAME, MYSQL_PASSWORD)
+
+step-3: create a statement from connection
+             *  types: Statement: to run a static query
+             *         PreparedStatement: to run a prepared(query with dynamic inputs) query
+             *         Callable statement: To run stored procedures   
+         
+
+execute methods:
+             * execute(): DML, DQL or any SQL queries / returns ResultSet
+             * executeUpdate(): DDL(CREATE, ALTER), DML(INSERT, UPDATE, DELETE) / returns integer(no. of rows affected)
+             * executeQuery(): DQL(SELECT) / returns ResultSet

@@ -22,6 +22,8 @@ proper htlm Document:(Syntax);
    
     <body>
       //Content
+
+
    </body>
 </html>
 
@@ -445,7 +447,7 @@ its most use full for css to display a content.
 The display value of inline-block works similarly to inline with one exception: the height and width of that element become modifiable.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
-escapt char --> &copy.&cent,&lt,&gt,&amp,&quot,&pound,&yen,&euro,&reg,&trade,&lsquo,&requo,&lsquo,&rdquo,&times,&divide  --> example <p>&divide</p>
+escap char --> &copy.&cent,&lt,&gt,&amp,&quot,&pound,&yen,&euro,&reg,&trade,&lsquo,&requo,&lsquo,&rdquo,&times,&divide  --> example <p>&divide</p>
 ----
 meta tag:The <meta> tag defines metadata about an HTML document. (Or) to tell the search engines  about your page and the information it contains.
 
@@ -633,11 +635,6 @@ flex-directaion -->default row.  flex-direction:column --> it distribute colum w
                           properties: ,start,end,center,stretch --> to strtch parent entier height. 
 
 --> flex-flow -->it shorthand of flex-direction and flex-wrap. ex: flex-flow:row wrap.
-
-
---> align-content Property
-The align-content property is used to align the flex lines.
-
 ________________________________________________________________________________________________________________________________________________________
 Grid:
  flext and grid diff:
@@ -648,7 +645,7 @@ Grid:
 properties:
 repeat(repleted columns,size)  -->usage of  how many colums display and second one is maintaine size.
 minmax()  --> usage of maintain to display mimum and maxmum width based on viewport width in specific element.
-auto-fit --> usage of maintain display width automatically based on viewport .
+auto-fit --> usage of maintain display width automatically based on viewport.
 auto-fill -->maintane give size.
  grid-auto-flow:  --> its uses of controll the flow how row wise or colum wise.
 grid-auto-rows:  --> use of maitain extra elements size in give size.
@@ -657,3 +654,74 @@ grid-template-areas--> instead of grid-column ,and grid-row.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 practice frondend mentor.
+__________________________________________________________________________________________________________________________________________________________________
+___________________________________________________________________________________________________________________________________________
+Transition and Animation:
+
+Transition:
+
+    transition-duration: 3s;
+    transition-property: background-color,transform;  /*mention Which property only can change*/
+    /* transition-property: all; */
+    /* transition-timing-function: ease-in-out; */
+    /* transition-timing-function:linear; */
+    transition-timing-function:cubic-bezier(0.55,-0.34, 1, 1);  /*customize*/
+    transition-delay: 5s;  /*it used to can delay the transition */
+
+     transiton --> use of it represent above all properties.
+        transiton:transition-property transition-duration    transition-delay transition-timing-function;
+
+--> align-content Property
+The align-content property is used to align the flex lines.
+
+
+    /* transform: rotate(45deg); */
+    /* transform: rotatey(45deg); *//*y represent y axis*/
+    /* transform: scale(2); */
+    /* transform: scalex(2); */
+      transform: translatey(100px); /*move to require px */
+-------------------------------------------------
+animation:s
+
+first give a name for animation.
+propertie -->     animation-name: ani_name;
+
+and will going define animation we use @keyframe propertie
+then inside @keyframe will define animation.
+
+@keyframe ani_name{
+
+}
+
+properties:
+animation-duration:
+animation-fill-mode:
+ animation-fill-mode: forwards;  /*when animation reach 100% on keyframs*/
+    animation-iteration-count: 10;  /*it how much time repeate animation*/
+    position: relative;
+  /* animation-timing-function:linear ; */
+  /* animation-direction: reverse;  move on opposite direction */ 
+  animation: ani_name animation-duration  animation-timing-function animation-delay  animation-iteration-count animation-direction; 
+
+
+animation:  
+    
+ move a box:
+first change postion to relative
+
+ex:
+@keyframes circle{
+    50%{    //% base on animation-duration
+        background-color: blue;
+        width: 5%;
+        height: 50px; 
+    }
+   100%{
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+   } 
+}
+
+
+ 
